@@ -1,6 +1,6 @@
 {
-    "name": "SPACS.SysTemplate",
-    "rootNamespace": "SPACS.SysTemplate",
+    "name": "Reflectis.PLG.TasksReflectis",
+    "rootNamespace": "Reflectis.PLG.TasksReflectis",
     "references": [
         "GUID:ab59f74e483e1ee4595bfefea56493f2"
     ],
