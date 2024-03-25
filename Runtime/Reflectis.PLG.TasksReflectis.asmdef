@@ -2,7 +2,10 @@
     "name": "Reflectis.PLG.TasksReflectis",
     "rootNamespace": "Reflectis.PLG.TasksReflectis",
     "references": [
-        "GUID:ab59f74e483e1ee4595bfefea56493f2"
+        "GUID:ab59f74e483e1ee4595bfefea56493f2",
+        "GUID:fe738984b0c28c342b0d3d49a82efa50",
+        "GUID:23c385269eb2e5044a0a2686aeeaf762",
+        "GUID:cd061b4c2f54cbb48bf2a3b0abcf513f"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
