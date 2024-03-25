@@ -1,14 +1,12 @@
-# SPACS-SysTemplate
+# Reflectis-PLG-TasksReflectis
 
 ## How to install
 
-### Add this repository as a submodule
+Import from Git URL using Unity Package Manager: `https://github.com/AnotheRealitySrl/Reflectis-PLG-TasksReflectis.git`
 
-Copy this link: "https://github.com/AnotheRealitySrl/SPACS-SysTemplate.git".
+Alternatively, if you need to modify the content of the package, import it as a submodule under the `Packages` folder.
 
-In your Git client, add a new submodule.
-- Use the copied link as the source.
-- As destination path, write "Packages\SPACS-SysTemplate".
+Dependencies:
 
-## How to use
-TODO...
+- WIP
+
