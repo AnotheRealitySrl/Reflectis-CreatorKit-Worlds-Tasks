@@ -31,7 +31,10 @@ namespace Reflectis.PLG.TasksReflectis
             if (isNetworked)
             {
                 //wait for the placeholder to get the rpcManagerInterface, then get the interface and save it to my variables
-                //rpcManagerInterface = gameObject.GetComponent<ITasksRPCManager>();
+                while (gameObject.GetComponent<ITasksRPCManager>() == null)
+                {
+                    rpcManagerInterface = gameObject.GetComponent<ITasksRPCManager>();
+                }
             }
 
             base.Awake();
