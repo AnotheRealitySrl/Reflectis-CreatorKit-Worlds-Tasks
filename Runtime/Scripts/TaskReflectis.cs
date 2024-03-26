@@ -1,10 +1,6 @@
 using Reflectis.PLG.Tasks;
-using static Reflectis.PLG.Tasks.TaskNode;
-using Reflectis.PLG.Graphs;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using Reflectis.PLG.TasksNetworked;
+using static Reflectis.PLG.Tasks.TaskNode;
 
 namespace Reflectis.PLG.TasksReflectis
 {
@@ -20,14 +16,14 @@ namespace Reflectis.PLG.TasksReflectis
         {
             if (TaskSystemReflectis.Instance.isNetworked)
             {
-                TasksRPCManager.Instance.OnTaskCompleted += ForceTaskComplete;
+                TaskSystemReflectis.Instance.rpcManagerInterface.SetOnTaskCompleted(ForceTaskComplete);
                 forceCompleted = false;
             }
         }
 
         protected override void OnStatusChanged(TaskStatus oldStatus)
         {
-            if ((Node.Status == TaskStatus.Completed && !forceCompleted) && TaskSystemReflectis.Instance.isNetworked) 
+            if ((Node.Status == TaskStatus.Completed && !forceCompleted) && TaskSystemReflectis.Instance.isNetworked)
             {
 
                 TaskSystemReflectis.Instance.rpcManagerInterface.UpdateTasksID(taskID);
