@@ -5,10 +5,21 @@ namespace Reflectis.PLG.TasksReflectis
 {
     public class TaskSystemReflectis : TaskSystem
     {
-        [SerializeField] public bool isNetworked { get; private set; }
-
         public ITasksRPCManager rpcManagerInterface { get; private set; }
         public static TaskSystemReflectis Instance { get; private set; }
+
+        [SerializeField] private bool _isNetworked;
+        public bool isNetworked
+        {
+            private set
+            {
+                _isNetworked = value;
+            }
+            get
+            {
+                return _isNetworked;
+            }
+        }
 
 
         //questo deve prendersi istanza dell'rpcManager che viene generato tramite il placeholder, in realtà si piglia l'interfaccia. 
