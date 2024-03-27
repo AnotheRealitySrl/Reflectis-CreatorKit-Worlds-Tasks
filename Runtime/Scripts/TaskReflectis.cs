@@ -1,4 +1,5 @@
 using Reflectis.PLG.Tasks;
+using System.Collections;
 using UnityEngine;
 using static Reflectis.PLG.Tasks.TaskNode;
 
@@ -10,15 +11,30 @@ namespace Reflectis.PLG.TasksReflectis
         [SerializeField]
         private int taskID;
 
+        private ITasksRPCManager rpcManagerInterface;
+
         public int TaskID { get => taskID; }
 
         private void Start()
         {
             if (TaskSystemReflectis.Instance.isNetworked)
             {
-                TaskSystemReflectis.Instance.rpcManagerInterface.SetOnTaskCompleted(ForceTaskComplete);
-                forceCompleted = false;
+                Debug.LogError("Waiting for rpcManager");
+                StartCoroutine(WaitForRPCManager());
+                Debug.LogError("Finished waiting for rpcManager");
             }
+        }
+
+        IEnumerator WaitForRPCManager()
+        {
+            StartCoroutine(TaskSystemReflectis.Instance.WaitForRPCManager());
+            while (rpcManagerInterface == null)
+            {
+                rpcManagerInterface = TaskSystemReflectis.Instance.rpcManagerInterface;
+                yield return null;
+            }
+            rpcManagerInterface.SetOnTaskCompleted(ForceTaskComplete);
+            forceCompleted = false;
         }
 
         protected override void OnStatusChanged(TaskStatus oldStatus)
