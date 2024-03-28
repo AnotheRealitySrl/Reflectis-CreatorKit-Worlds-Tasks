@@ -19,9 +19,7 @@ namespace Reflectis.PLG.TasksReflectis
         {
             if (TaskSystemReflectis.Instance.isNetworked)
             {
-                Debug.LogError("Waiting for rpcManager");
                 StartCoroutine(WaitForRPCManager());
-                Debug.LogError("Finished waiting for rpcManager");
             }
         }
 
