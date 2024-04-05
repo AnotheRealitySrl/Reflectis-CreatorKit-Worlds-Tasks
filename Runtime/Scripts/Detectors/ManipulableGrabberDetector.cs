@@ -12,6 +12,8 @@ namespace Reflectis.PLG.TasksReflectis
         public InteractablePlaceholder interactablePlaceholder;
         public UnityEvent OnGrabStart = default;
         public UnityEvent OnGrabEnd = default;
+        public UnityEvent OnRayGrabStart = default;
+        public UnityEvent OnRayGrabEnd = default;
 
         //private Grabbable grabbableObj;
 
@@ -31,28 +33,41 @@ namespace Reflectis.PLG.TasksReflectis
 
             //add OnGrabEvent to the Manipulable. The ManipulableVR and ManipulableDesktop will have a callback on that event
             Manipulable manipulable = interactablePlaceholder.gameObject.GetComponent<Manipulable>();
+
             if (manipulable)
             {
-                Debug.LogError("ok the object has now a manipulable after the setup!!!!");
-                Debug.LogError(manipulable);
-                //Debug.LogError(manipulable.OnGrabManipulableStart);
-                //manipulable.OnGrabManipulableStart.AddListener(OnGrabStartEvent);
-
+                if (manipulable.OnGrabManipulableStart == null)
+                {
+                    Debug.LogError("Enbtering if because null");
+                    manipulable.OnGrabManipulableStart = new UnityEvent();
+                }
+                manipulable.OnGrabManipulableStart.AddListener(OnGrabStartEvent);
+                manipulable.OnGrabManipulableEnd.AddListener(OnGrabEndEvent);
+                manipulable.OnRayGrabManipulableStart.AddListener(On)
             }
         }
 
         private void OnGrabStartEvent()
         {
-            //OnGrabStart.Invoke();
-
-            Debug.LogError("WORKED START EVENT ON MANIPULABLE");
+            OnGrabStart.Invoke();
         }
 
         private void OnGrabEndEvent()
         {
             OnGrabEnd.Invoke();
-            Debug.LogError("WORKED END EVENT ON MANIPULABLE");
         }
+
+        private void OnRayGrabStartEvent()
+        {
+            OnRayGrabStart.Invoke();
+        }
+
+        private void OnRayGrabEndEvent()
+        {
+            OnRayGrabEnd.Invoke();
+        }
+
+
 
     }
 }
