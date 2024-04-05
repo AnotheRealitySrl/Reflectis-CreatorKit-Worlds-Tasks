@@ -43,7 +43,8 @@ namespace Reflectis.PLG.TasksReflectis
                 }
                 manipulable.OnGrabManipulableStart.AddListener(OnGrabStartEvent);
                 manipulable.OnGrabManipulableEnd.AddListener(OnGrabEndEvent);
-                manipulable.OnRayGrabManipulableStart.AddListener(On)
+                manipulable.OnRayGrabManipulableStart.AddListener(OnRayGrabStartEvent);
+                manipulable.OnRayGrabManipulableStart.AddListener(OnRayGrabEndEvent);
             }
         }
 
