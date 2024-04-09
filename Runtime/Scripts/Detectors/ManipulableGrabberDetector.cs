@@ -38,7 +38,6 @@ namespace Reflectis.PLG.TasksReflectis
             {
                 if (manipulable.OnGrabManipulableStart == null)
                 {
-                    Debug.LogError("Enbtering if because null");
                     manipulable.OnGrabManipulableStart = new UnityEvent();
                 }
                 manipulable.OnGrabManipulableStart.AddListener(OnGrabStartEvent);
