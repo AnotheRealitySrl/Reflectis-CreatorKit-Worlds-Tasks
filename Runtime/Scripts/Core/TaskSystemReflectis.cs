@@ -8,6 +8,7 @@ namespace Reflectis.PLG.TasksReflectis
     {
         public ITasksRPCManager rpcManagerInterface { get; private set; }
         public static TaskSystemReflectis Instance { get; private set; }
+        private int initializedTaskDescriptions = 0;
 
         [SerializeField] private bool _isNetworked;
         public bool isNetworked
@@ -39,10 +40,14 @@ namespace Reflectis.PLG.TasksReflectis
                 Instance = this;
             }
 
+            initializedTaskDescriptions = 0;
+
             /*if (isNetworked)
             {
                 Debug.Log(gameObject.GetComponent<ITasksRPCManager>());
             }*/
+
+            //TODO wait for all taskNode to update their descriptions....
 
             base.Awake();
         }
@@ -57,6 +62,21 @@ namespace Reflectis.PLG.TasksReflectis
                 }
                 rpcManagerInterface = gameObject.GetComponent<ITasksRPCManager>();
             }
+        }
+
+        //function called when the descriptions on the tasks have been initialized in the localizeTaskBridge
+        public void InitializedTaskDescription()
+        {
+            initializedTaskDescriptions += 1;
+
+            //this simply rebuilds the UI
+            taskSystemReady.Invoke();
+
+            /*if (initializedTaskDescriptions == Tasks.Count)
+            {
+                Debug.LogError("AllTasks initialized!");
+                taskSystemReady.Invoke();
+            }*/
         }
     }
 }
