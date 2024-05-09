@@ -22,7 +22,6 @@ namespace Reflectis.PLG.TasksReflectis
         {
             if (interactablePlaceholder.InteractionModes.HasFlag(EInteractableType.Manipulable))
             {
-                Debug.LogError("This is a maniupulable object and so I have to add the detector when grabbed");
                 interactablePlaceholder.OnSetupFinished.AddListener(OnSetupFinished);
             }
         }
