@@ -46,6 +46,23 @@ namespace Reflectis.PLG.TasksReflectis
             }
         }
 
+        public void OnDisabled()
+        {
+            Manipulable manipulable = interactablePlaceholder.gameObject.GetComponent<Manipulable>();
+
+            if (manipulable)
+            {
+                if (manipulable.OnGrabManipulableStart == null)
+                {
+                    manipulable.OnGrabManipulableStart = new UnityEvent();
+                }
+                manipulable.OnGrabManipulableStart.RemoveListener(OnGrabStartEvent);
+                manipulable.OnGrabManipulableEnd.RemoveListener(OnGrabEndEvent);
+                manipulable.OnRayGrabManipulableStart.RemoveListener(OnRayGrabStartEvent);
+                manipulable.OnRayGrabManipulableStart.RemoveListener(OnRayGrabEndEvent);
+            }
+        }
+
         private void OnGrabStartEvent()
         {
             OnGrabStart.Invoke();
