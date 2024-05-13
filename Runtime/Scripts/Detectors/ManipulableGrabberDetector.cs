@@ -42,7 +42,7 @@ namespace Reflectis.PLG.TasksReflectis
                 manipulable.OnGrabManipulableStart.AddListener(OnGrabStartEvent);
                 manipulable.OnGrabManipulableEnd.AddListener(OnGrabEndEvent);
                 manipulable.OnRayGrabManipulableStart.AddListener(OnRayGrabStartEvent);
-                manipulable.OnRayGrabManipulableStart.AddListener(OnRayGrabEndEvent);
+                manipulable.OnRayGrabManipulableEnd.AddListener(OnRayGrabEndEvent);
             }
         }
 
@@ -64,7 +64,7 @@ namespace Reflectis.PLG.TasksReflectis
                 manipulable.OnGrabManipulableStart.RemoveListener(OnGrabStartEvent);
                 manipulable.OnGrabManipulableEnd.RemoveListener(OnGrabEndEvent);
                 manipulable.OnRayGrabManipulableStart.RemoveListener(OnRayGrabStartEvent);
-                manipulable.OnRayGrabManipulableStart.RemoveListener(OnRayGrabEndEvent);
+                manipulable.OnRayGrabManipulableEnd.RemoveListener(OnRayGrabEndEvent);
             }
         }
 
