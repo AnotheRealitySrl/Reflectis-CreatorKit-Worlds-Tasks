@@ -51,7 +51,7 @@ namespace Reflectis.PLG.TasksReflectis
             OnSetupFinished();
         }
 
-        public void OnDisabled()
+        public void OnDisable()
         {
             Manipulable manipulable = interactablePlaceholder.gameObject.GetComponent<Manipulable>();
 
@@ -61,6 +61,8 @@ namespace Reflectis.PLG.TasksReflectis
                 {
                     manipulable.OnGrabManipulableStart = new UnityEvent();
                 }
+
+                Debug.LogError("Demove all lsiteners");
                 manipulable.OnGrabManipulableStart.RemoveListener(OnGrabStartEvent);
                 manipulable.OnGrabManipulableEnd.RemoveListener(OnGrabEndEvent);
                 manipulable.OnRayGrabManipulableStart.RemoveListener(OnRayGrabStartEvent);
