@@ -46,6 +46,11 @@ namespace Reflectis.PLG.TasksReflectis
             }
         }
 
+        public void OnEnable()
+        {
+            OnSetupFinished();
+        }
+
         public void OnDisabled()
         {
             Manipulable manipulable = interactablePlaceholder.gameObject.GetComponent<Manipulable>();
