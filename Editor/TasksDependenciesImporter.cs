@@ -24,6 +24,22 @@ public static class TasksDependenciesImporter
 
     private static void OnRegisteredPackages(PackageRegistrationEventArgs args)
     {
+        ShowDependenciesPopup();
+    }
+
+    private static void ShowDependenciesPopup()
+    {
+        // Display the popup dialog to the user
+        if (EditorUtility.DisplayDialog("Install Git Packages",
+            "Do you want to install the specified Git packages?",
+            "Install", "Cancel"))
+        {
+            InstallPackages();
+        }
+    }
+
+    private static void InstallPackages()
+    {
         string manifestFilePath = Path.Combine(Application.dataPath, "../Packages/manifest.json");
 
         //if (PackageExists(packageName)) return;
@@ -59,7 +75,6 @@ public static class TasksDependenciesImporter
             File.WriteAllText(manifestFilePath, manifestObj.ToString());
             AssetDatabase.Refresh();
         }
-
     }
 
     private static bool PackageExists(string packageName)
