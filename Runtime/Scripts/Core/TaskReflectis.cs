@@ -7,15 +7,15 @@ namespace Reflectis.PLG.TasksReflectis
 {
     public class TaskReflectis : Task
     {
-        private bool forceCompleted = false;
+        protected bool forceCompleted = false;
         [SerializeField]
-        private int taskID;
+        protected int taskID;
 
-        private ITasksRPCManager rpcManagerInterface;
+        protected ITasksRPCManager rpcManagerInterface;
 
         public int TaskID { get => taskID; }
 
-        private void Start()
+        protected void Start()
         {
             if (TaskSystemReflectis.Instance.isNetworked)
             {
@@ -59,9 +59,14 @@ namespace Reflectis.PLG.TasksReflectis
         }
 
         //Auto-assign random id when task is created from graph
-        private void Reset()
+        protected void Reset()
         {
             taskID = Mathf.Abs(gameObject.GetInstanceID());
+        }
+
+        public override void AddDetector()
+        {
+            base.AddDetector();
         }
     }
 }
