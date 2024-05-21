@@ -1,4 +1,5 @@
 using Reflectis.PLG.Graphs;
+using Reflectis.PLG.Tasks;
 using UnityEngine;
 
 namespace Reflectis.PLG.TasksReflectis
@@ -19,7 +20,8 @@ namespace Reflectis.PLG.TasksReflectis
             base.AddDetector();
             GameObject go = new GameObject("ManipulableDetector");
             go.transform.SetParent(gameObject.transform);
-            go.AddComponent<ManipulableGrabberDetector>();
+            go.AddComponent<TaskReactor>();
+            go.AddComponent<ManipulableGrabberDetector>().enabled = false;
         }
     }
 }

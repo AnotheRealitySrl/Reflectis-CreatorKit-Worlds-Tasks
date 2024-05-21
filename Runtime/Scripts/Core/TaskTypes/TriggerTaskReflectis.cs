@@ -1,4 +1,5 @@
 using Reflectis.PLG.Graphs;
+using Reflectis.PLG.Tasks;
 using Reflectis.PLG.Tasks.Detectors;
 using UnityEngine;
 
@@ -13,7 +14,8 @@ namespace Reflectis.PLG.TasksReflectis
             base.AddDetector();
             GameObject go = new GameObject("TriggerDetector");
             go.transform.SetParent(gameObject.transform);
-            go.AddComponent<TriggerDetector>();
+            go.AddComponent<TaskReactor>();
+            go.AddComponent<TriggerDetector>().enabled = false;
         }
     }
 }

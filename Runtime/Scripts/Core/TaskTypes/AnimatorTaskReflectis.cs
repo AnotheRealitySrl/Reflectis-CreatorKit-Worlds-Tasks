@@ -13,7 +13,8 @@ namespace Reflectis.PLG.TasksReflectis
             base.AddDetector();
             GameObject go = new GameObject("AnimatorDetector");
             go.transform.SetParent(gameObject.transform);
-            go.AddComponent<AnimatorReverseDetector>();
+            go.AddComponent<TaskReactor>();
+            go.AddComponent<AnimatorReverseDetector>().enabled = false;
         }
     }
 }

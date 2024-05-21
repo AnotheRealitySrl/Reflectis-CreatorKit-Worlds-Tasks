@@ -1,4 +1,5 @@
 using Reflectis.PLG.Graphs;
+using Reflectis.PLG.Tasks;
 using Reflectis.PLG.Tasks.Detectors;
 using UnityEngine;
 
@@ -20,7 +21,8 @@ namespace Reflectis.PLG.TasksReflectis
             base.AddDetector();
             GameObject go = new GameObject("TimerDetector");
             go.transform.SetParent(gameObject.transform);
-            go.AddComponent<TimerDetector>();
+            go.AddComponent<TaskReactor>();
+            go.AddComponent<TimerDetector>().enabled = false;
         }
     }
 }
