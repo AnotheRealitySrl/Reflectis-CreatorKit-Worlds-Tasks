@@ -62,7 +62,6 @@ namespace Reflectis.PLG.TasksReflectis
                     manipulable.OnGrabManipulableStart = new UnityEvent();
                 }
 
-                Debug.LogError("Demove all lsiteners");
                 manipulable.OnGrabManipulableStart.RemoveListener(OnGrabStartEvent);
                 manipulable.OnGrabManipulableEnd.RemoveListener(OnGrabEndEvent);
                 manipulable.OnRayGrabManipulableStart.RemoveListener(OnRayGrabStartEvent);

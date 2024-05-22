@@ -1,12 +1,14 @@
 Key,Type,Desc,Italian [it],English [en]
-FirstTask,Text,,Primi passi,First steps
-TimerTaskNode,Text,,Aspetta 3 secondi...,Wait 3 seconds
-GrabTaskNode,Text,,Afferra il cubo,Grab the cube
-TriggerTaskNode,Text,,Porta il cubo che hai afferrato sul cubo più scuro,Bring the grabbed cube to the bigger one
-AnimatorTaskNode,Text,,Task di animazione!,Animation Task!
-UITaskNode,Text,,Task di UI,UI's Tasks
-PressButtonTask,Text,,Premi il bottone,Press the button
-PressSecondButtonTask,Text,,Premi il secondo bottone,Press the second button
-VisualScriptTask,Text,,Esempio visual script,Visual script example
-FirstButton,Text,,Bottone Uno!,First Button
-SecondButton,Text,,Bottone Due!,Second Button
+YellowBoxTask,Text,,Primi passi,First steps
+GrabTaskNode,Text,,Afferra il cubo giallo,Grab the yellow cube
+TriggerTaskNode,Text,,Porta il cubo che hai afferrato nel punto indicato,Bring the grabbed cube to the highlighted point
+BoxesTask,Text,,Porta tutti i Box,Bring all the boxes
+WhiteBoxTask,Text,,Porta il cubo bianco nel punto indicato,Bring the white cube to the highlighted point
+BlackBoxTask,Text,,Porta il cubo nero nel punto indicato,Bring the black cube to the highlighted point
+TimeTaskNode,Text,,Aspetta 3 secondi,Wait 3 seconds
+AnimatorTaskNode,Text,,Esempio Animazione,Animation Example
+UITaskNode,Text,,Esempio Task UI,UI's Task Example
+PressButtonTask,Text,,Bottone Uno!,First Button
+PressSecondButtonTask,Text,,Bottone Due!,Second Button
+VisualScriptTask,Text,,Esempio Task VS Script,VS Scripting Example
+VSScriptGrabTask,Text,,Afferra il cubo,Grab the cube
