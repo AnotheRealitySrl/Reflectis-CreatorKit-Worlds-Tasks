@@ -1,0 +1,12 @@
+Key,Type,Desc,Italian [it],English [en]
+FirstTask,Text,,Primi passi,First steps
+TimerTaskNode,Text,,Aspetta 3 secondi...,Wait 3 seconds
+GrabTaskNode,Text,,Afferra il cubo,Grab the cube
+TriggerTaskNode,Text,,Porta il cubo che hai afferrato sul cubo più scuro,Bring the grabbed cube to the bigger one
+AnimatorTaskNode,Text,,Task di animazione!,Animation Task!
+UITaskNode,Text,,Task di UI,UI's Tasks
+PressButtonTask,Text,,Premi il bottone,Press the button
+PressSecondButtonTask,Text,,Premi il secondo bottone,Press the second button
+VisualScriptTask,Text,,Esempio visual script,Visual script example
+FirstButton,Text,,Bottone Uno!,First Button
+SecondButton,Text,,Bottone Due!,Second Button
