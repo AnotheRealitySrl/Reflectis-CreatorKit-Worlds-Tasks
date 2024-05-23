@@ -11,5 +11,13 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/AnotheRealitySrl/Reflectis-PLG-TasksReflectis"
-  }
+  },
+  "samples": [
+    {
+      "displayName": "Sample Task Scene",
+      "description": "Contains a sample scene to show how to use the task system",
+      "path": "TaskSampleScene~"
+    }
+
+  ]
 }
