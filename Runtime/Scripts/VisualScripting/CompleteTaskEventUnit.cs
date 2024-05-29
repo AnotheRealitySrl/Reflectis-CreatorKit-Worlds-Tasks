@@ -3,6 +3,10 @@ using Unity.VisualScripting;
 
 namespace Reflectis.PLG.TasksReflectis
 {
+    [UnitTitle("Reflectis Tasks: CompleteTask")]
+    [UnitSurtitle("Tasks")]
+    [UnitShortTitle("CompleteTask")]
+    [UnitCategory("Reflectis\\Flow")]
     public class CompleteTaskEventUnit : Unit
     {
 

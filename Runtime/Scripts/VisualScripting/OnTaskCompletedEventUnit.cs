@@ -3,6 +3,10 @@ using Unity.VisualScripting;
 
 namespace Reflectis.PLG.TasksReflectis
 {
+    [UnitTitle("Reflectis Tasks: On Task Completed")]
+    [UnitSurtitle("Tasks")]
+    [UnitShortTitle("On Task Completed")]
+    [UnitCategory("Events\\Reflectis")]
     public class OnTaskCompletedEventUnit : EventUnit<Task>
     {
         protected override bool register => true;
