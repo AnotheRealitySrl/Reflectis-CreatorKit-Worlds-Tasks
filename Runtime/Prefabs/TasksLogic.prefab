@@ -209,6 +209,7 @@ MonoBehaviour:
   lastTaskCompleted:
     m_PersistentCalls:
       m_Calls: []
+  taskUIManager: {fileID: 550293240628359277}
   _isNetworked: 0
 --- !u!114 &195393046080177994
 MonoBehaviour:

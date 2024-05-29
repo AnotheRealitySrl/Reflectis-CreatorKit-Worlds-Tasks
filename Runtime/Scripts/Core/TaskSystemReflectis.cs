@@ -1,4 +1,5 @@
 using Reflectis.PLG.Tasks;
+using Reflectis.PLG.Tasks.UI;
 using System.Collections;
 using UnityEngine;
 
@@ -8,6 +9,8 @@ namespace Reflectis.PLG.TasksReflectis
     {
         public ITasksRPCManager rpcManagerInterface { get; private set; }
         public static TaskSystemReflectis Instance { get; private set; }
+
+        public TaskUIManager taskUIManager;
         private int initializedTaskDescriptions = 0;
 
         [SerializeField] private bool _isNetworked;
@@ -70,13 +73,18 @@ namespace Reflectis.PLG.TasksReflectis
             initializedTaskDescriptions += 1;
 
             //this simply rebuilds the UI
-            taskSystemReady.Invoke();
+            //taskSystemReady.Invoke();
 
-            /*if (initializedTaskDescriptions == Tasks.Count)
+            if (initializedTaskDescriptions == Tasks.Count)
             {
-                Debug.LogError("AllTasks initialized!");
-                taskSystemReady.Invoke();
-            }*/
+                //Debug.LogError("AllTasks initialized!");
+                taskUIManager.RebuildUIImmediately();
+            }
+        }
+
+        public void RebuildTaskUI()
+        {
+            taskUIManager.RebuildUIImmediately();
         }
     }
 }
