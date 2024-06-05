@@ -1,6 +1,5 @@
 # Reflectis-PLG-TasksReflectis
 
-## Realease notes:
-### v.1.0
----
-- First implementation.
+## v1.0.0
+
+- Initial release
