@@ -1,0 +1,19 @@
+{
+    "name": "Reflectis.PLG.TasksReflectis.Editor",
+    "rootNamespace": "Reflectis.PLG.TasksReflectisEditor",
+    "references": [
+        "GUID:213a20fc7dc3c964ea49c0cdd8d72aa5",
+        "GUID:40fa99dae01a17147ab87fa6da4d559c"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
