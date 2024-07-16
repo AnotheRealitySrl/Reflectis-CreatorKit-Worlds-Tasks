@@ -2,6 +2,7 @@ using Reflectis.PLG.Tasks;
 using Reflectis.PLG.Tasks.UI;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Reflectis.PLG.TasksReflectis
 {
@@ -25,6 +26,10 @@ namespace Reflectis.PLG.TasksReflectis
                 return _isNetworked;
             }
         }
+
+
+        // VisualScripting usage
+        public UnityEvent OnTaskSystemReady => taskSystemReady;
 
 
         //questo deve prendersi istanza dell'rpcManager che viene generato tramite il placeholder, in realtà si piglia l'interfaccia. 
