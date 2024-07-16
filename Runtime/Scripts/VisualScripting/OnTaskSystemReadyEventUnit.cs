@@ -29,12 +29,12 @@ namespace Reflectis.PLG.TasksReflectis
             graphReference = reference;
             using (var flow = Flow.New(reference))
             {
-                RegisterTaskOnCompleted(flow);
+                RegisterSystemOnReady(flow);
             }
             return new EventHook("Task" + this.ToString().Split("EventUnit")[0]);
         }
 
-        private void RegisterTaskOnCompleted(Flow flow)
+        private void RegisterSystemOnReady(Flow flow)
         {
             taskSystemReference = flow.GetValue<TaskSystemReflectis>(TaskSystemReference);
             if (taskSystemReference == null)
