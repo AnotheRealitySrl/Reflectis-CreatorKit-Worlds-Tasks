@@ -83,13 +83,19 @@ namespace Reflectis.PLG.TasksReflectis
             if (initializedTaskDescriptions == Tasks.Count)
             {
                 //Debug.LogError("AllTasks initialized!");
-                taskUIManager.RebuildUIImmediately();
+                if (taskUIManager != null)
+                {
+                    taskUIManager.RebuildUIImmediately();
+                }
             }
         }
 
         public void RebuildTaskUI()
         {
-            taskUIManager.RebuildUIImmediately();
+            if (taskUIManager != null)
+            {
+                taskUIManager.RebuildUIImmediately();
+            }
         }
     }
 }
