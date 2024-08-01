@@ -12,12 +12,14 @@ namespace Reflectis.PLG.TasksReflectis
         protected int taskID;
 
         protected ITasksRPCManager rpcManagerInterface;
+        private TaskSystemReflectis taskSystem;
 
         public int TaskID { get => taskID; }
 
         protected void Start()
         {
-            if (TaskSystemReflectis.Instance.isNetworked)
+            taskSystem = GetComponentInParent<TaskSystemReflectis>();
+            if (taskSystem.isNetworked)
             {
                 StartCoroutine(WaitForRPCManager());
             }
@@ -25,10 +27,10 @@ namespace Reflectis.PLG.TasksReflectis
 
         IEnumerator WaitForRPCManager()
         {
-            StartCoroutine(TaskSystemReflectis.Instance.WaitForRPCManager());
+            StartCoroutine(taskSystem.WaitForRPCManager());
             while (rpcManagerInterface == null)
             {
-                rpcManagerInterface = TaskSystemReflectis.Instance.rpcManagerInterface;
+                rpcManagerInterface = taskSystem.rpcManagerInterface;
                 yield return null;
             }
             rpcManagerInterface.SetOnTaskCompleted(ForceTaskComplete);
@@ -37,11 +39,11 @@ namespace Reflectis.PLG.TasksReflectis
 
         protected override void OnStatusChanged(TaskStatus oldStatus)
         {
-            if ((Node.Status == TaskStatus.Completed && !forceCompleted) && TaskSystemReflectis.Instance.isNetworked)
+            if ((Node.Status == TaskStatus.Completed && !forceCompleted) && taskSystem.isNetworked)
             {
 
-                TaskSystemReflectis.Instance.rpcManagerInterface.UpdateTasksID(taskID);
-                TaskSystemReflectis.Instance.rpcManagerInterface.SendRPCTaskStatusChange(taskID);
+                taskSystem.rpcManagerInterface.UpdateTasksID(taskID);
+                taskSystem.rpcManagerInterface.SendRPCTaskStatusChange(taskID);
             }
 
             forceCompleted = false;

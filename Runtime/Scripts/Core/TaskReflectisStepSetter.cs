@@ -8,13 +8,14 @@ namespace Reflectis.PLG.TasksReflectis
     public class TaskReflectisStepSetter : TaskStepSetter
     {
         protected ITasksRPCManager rpcManagerInterface;
+        private TaskSystemReflectis systemReflectis;
 
         private void Start()
         {
-            if (TaskSystemReflectis.Instance.isNetworked)
+            systemReflectis = GetComponent<TaskSystemReflectis>();
+            if (systemReflectis.isNetworked)
             {
                 StartCoroutine(WaitForRPCManager());
-                taskSystem = TaskSystemReflectis.Instance;
             }
             
         }
@@ -22,10 +23,10 @@ namespace Reflectis.PLG.TasksReflectis
         private IEnumerator WaitForRPCManager(){
             while (rpcManagerInterface == null)
             {
-                rpcManagerInterface = TaskSystemReflectis.Instance.rpcManagerInterface;
+                rpcManagerInterface = systemReflectis.rpcManagerInterface;
                 yield return null;
             }
-            rpcManagerInterface = TaskSystemReflectis.Instance.rpcManagerInterface;
+            rpcManagerInterface = systemReflectis.rpcManagerInterface;
             rpcManagerInterface.AddJoinRoomEvent(Init);
         }
 
@@ -52,7 +53,7 @@ namespace Reflectis.PLG.TasksReflectis
             }
 
             // Ordered list of tasks. I assign the state "Complete" until I find the node I want.
-            IReadOnlyCollection<TaskNode> allNodes = TaskSystemReflectis.Instance.Tasks;
+            IReadOnlyCollection<TaskNode> allNodes = systemReflectis.Tasks;
             foreach (TaskNode node in allNodes)
             {
                 if (CompleteTaskRecursive(node, newNode))
