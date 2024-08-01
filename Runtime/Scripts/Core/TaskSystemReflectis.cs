@@ -9,7 +9,7 @@ namespace Reflectis.PLG.TasksReflectis
     public class TaskSystemReflectis : TaskSystem
     {
         public ITasksRPCManager rpcManagerInterface { get; private set; }
-        public static TaskSystemReflectis Instance { get; private set; }
+        //public static TaskSystemReflectis Instance { get; private set; }
 
         public TaskUIManager taskUIManager;
         private int initializedTaskDescriptions = 0;
@@ -39,14 +39,14 @@ namespace Reflectis.PLG.TasksReflectis
         {
             // If there is an instance, and it's not me, delete myself.
 
-            if (Instance != null && Instance != this)
-            {
-                Destroy(this);
-            }
-            else
-            {
-                Instance = this;
-            }
+            //if (Instance != null && Instance != this)
+            //{
+            //    Destroy(this);
+            //}
+            //else
+            //{
+            //    Instance = this;
+            //}
 
             initializedTaskDescriptions = 0;
 
