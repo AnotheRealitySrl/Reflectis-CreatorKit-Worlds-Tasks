@@ -72,7 +72,7 @@ namespace Reflectis.PLG.TasksReflectis
                 rpcManagerInterface = gameObject.GetComponent<ITasksRPCManager>();
 
 
-                rpcManagerInterface.SetOnRevert(Revert);
+                rpcManagerInterface.SetOnRevert(base.Revert);
             }
         }
 
@@ -98,10 +98,9 @@ namespace Reflectis.PLG.TasksReflectis
         {
             if (isNetworked)
             {
-                rpcManagerInterface.UpdateTasksID(-1);
                 rpcManagerInterface.SendRPCTaskRevert();
+                rpcManagerInterface.UpdateTasksID(-1);
             }
-
             base.Revert();        
         }
 
