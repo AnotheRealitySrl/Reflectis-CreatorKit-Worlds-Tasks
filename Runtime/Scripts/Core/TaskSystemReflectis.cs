@@ -1,5 +1,6 @@
 using Reflectis.PLG.Tasks;
 using Reflectis.PLG.Tasks.UI;
+using Reflectis.SDK.Core;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -69,6 +70,9 @@ namespace Reflectis.PLG.TasksReflectis
                     yield return null;
                 }
                 rpcManagerInterface = gameObject.GetComponent<ITasksRPCManager>();
+
+
+                rpcManagerInterface.SetOnRevert(Revert);
             }
         }
 
@@ -88,6 +92,17 @@ namespace Reflectis.PLG.TasksReflectis
                     taskUIManager.RebuildUIImmediately();
                 }
             }
+        }
+
+        public override void Revert()
+        {
+            if (isNetworked)
+            {
+                rpcManagerInterface.UpdateTasksID(-1);
+                rpcManagerInterface.SendRPCTaskRevert();
+            }
+
+            base.Revert();        
         }
 
         public void RebuildTaskUI()
