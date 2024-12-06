@@ -27,7 +27,7 @@ namespace Reflectis.PLG.TasksReflectis
 
         IEnumerator WaitForRPCManager()
         {
-            if(taskSystem)
+            if (taskSystem)
                 StartCoroutine(taskSystem.WaitForRPCManager());
             while (rpcManagerInterface == null)
             {

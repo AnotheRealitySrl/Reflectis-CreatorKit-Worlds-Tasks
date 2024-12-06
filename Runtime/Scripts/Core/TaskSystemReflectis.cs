@@ -1,5 +1,6 @@
 using Reflectis.PLG.Tasks;
 using Reflectis.PLG.Tasks.UI;
+using Reflectis.SDK.ClientModels;
 using Reflectis.SDK.Core;
 using System.Collections;
 using UnityEngine;
@@ -24,7 +25,7 @@ namespace Reflectis.PLG.TasksReflectis
             }
             get
             {
-                return _isNetworked;
+                return _isNetworked && SM.GetSystem<IClientModelSystem>().CurrentEvent.Multiplayer;
             }
         }
 
@@ -101,7 +102,7 @@ namespace Reflectis.PLG.TasksReflectis
                 rpcManagerInterface.SendRPCTaskRevert();
                 rpcManagerInterface.UpdateTasksID(-1);
             }
-            base.Revert();        
+            base.Revert();
         }
 
         public void RebuildTaskUI()
