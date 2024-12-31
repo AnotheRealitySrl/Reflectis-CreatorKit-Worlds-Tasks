@@ -1,6 +1,6 @@
 using Reflectis.PLG.Tasks;
 using Reflectis.PLG.Tasks.UI;
-using Reflectis.SDK.ClientModels;
+using Reflectis.ClientModels;
 using Reflectis.SDK.Core;
 using System.Collections;
 using UnityEngine;
