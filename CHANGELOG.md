@@ -1,4 +1,4 @@
-# Reflectis-PLG-TasksReflectis
+# Reflectis-SDK-TasksReflectis
 
 ## v1.2.0
 

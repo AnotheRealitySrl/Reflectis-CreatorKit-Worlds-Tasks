@@ -1,9 +1,9 @@
-using Reflectis.PLG.Tasks;
+using Reflectis.SDK.Tasks;
 using System.Collections;
 using UnityEngine;
-using static Reflectis.PLG.Tasks.TaskNode;
+using static Reflectis.SDK.Tasks.TaskNode;
 
-namespace Reflectis.PLG.TasksReflectis
+namespace Reflectis.SDK.TasksReflectis
 {
     public class TaskReflectis : Task
     {

@@ -192,7 +192,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 550293240628359277}
-        m_TargetAssemblyTypeName: Reflectis.PLG.Tasks.UI.TaskUIManager, Reflectis.PLG.Tasks
+        m_TargetAssemblyTypeName: Reflectis.SDK.Tasks.UI.TaskUIManager, Reflectis.SDK.Tasks
         m_MethodName: DoAfterTaskPrepare
         m_Mode: 1
         m_Arguments:

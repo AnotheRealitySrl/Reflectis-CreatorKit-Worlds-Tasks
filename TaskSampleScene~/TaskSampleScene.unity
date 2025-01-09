@@ -288,7 +288,7 @@ MonoBehaviour:
     version: 2
     RefIds:
     - rid: 2588566437349556262
-      type: {class: TaskNode, ns: Reflectis.PLG.Tasks, asm: Reflectis.PLG.Tasks}
+      type: {class: TaskNode, ns: Reflectis.SDK.Tasks, asm: Reflectis.SDK.Tasks}
       data:
         guid: 5fbceaf5-455e-4502-8b3f-4812dba05d59
         name: PressButtonTask
@@ -316,14 +316,14 @@ MonoBehaviour:
           m_PersistentCalls:
             m_Calls: []
     - rid: 2588566437349556263
-      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.PLG.Graphs,
-        asm: Reflectis.PLG.Graphs}
+      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.SDK.Graphs,
+        asm: Reflectis.SDK.Graphs}
       data:
         nodeContainer: {fileID: 1057815564}
         portName: dependencies
     - rid: 2588566437349556267
-      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.PLG.Graphs,
-        asm: Reflectis.PLG.Graphs}
+      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.SDK.Graphs,
+        asm: Reflectis.SDK.Graphs}
       data:
         nodeContainer: {fileID: 1731113464}
         portName: input
@@ -1077,7 +1077,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"nest":{"source":"Embed","macro":null,"embed":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":65.32465,"y":-61.98611},"zoom":0.6999999,"elements":[{"coroutine":false,"defaultValues":{},"position":{"x":-619.0,"y":-105.0},"guid":"9f9f9b12-0219-4174-a53e-7cbf36b8c943","$version":"A","$type":"Reflectis.SDK.CreatorKit.OnManipulationStartEventUnit","$id":"10"},{"defaultValues":{"TaskToComplete":null},"position":{"x":-385.0,"y":-28.0},"guid":"4bfb403b-390a-432a-9a7a-864987da0826","$version":"A","$type":"Reflectis.PLG.TasksReflectis.CompleteTaskEventUnit","$id":"12"},{"coroutine":false,"defaultValues":{"TaskReference":null},"position":{"x":7.0,"y":-236.0},"guid":"62fe36d5-eaf2-4161-a5e7-dffa8cc40708","$version":"A","$type":"Reflectis.PLG.TasksReflectis.OnTaskCompletedEventUnit","$id":"14"},{"chainable":false,"parameterNames":["value"],"member":{"name":"SetActive","parameterTypes":["System.Boolean"],"targetType":"UnityEngine.GameObject","targetTypeName":"UnityEngine.GameObject","$version":"A"},"defaultValues":{"target":null,"%value":{"$content":true,"$type":"System.Boolean"}},"position":{"x":315.0,"y":-152.0},"guid":"9a13155b-1572-4233-b2c2-e4485256138c","$version":"A","$type":"Unity.VisualScripting.InvokeMember","$id":"16"},{"type":"UnityEngine.GameObject","value":{"$content":0,"$type":"UnityEngine.Object"},"defaultValues":{},"position":{"x":108.0,"y":-51.0},"guid":"1574ab27-4441-4c0b-be8a-aad6f65fa89b","$version":"A","$type":"Unity.VisualScripting.Literal","$id":"20"},{"type":"UnityEngine.GameObject","value":{"$content":1,"$type":"UnityEngine.Object"},"defaultValues":{},"position":{"x":-223.0,"y":-239.0},"guid":"779d83ec-4dc3-489e-bd49-889e85b289a8","$version":"A","$type":"Unity.VisualScripting.Literal","$id":"22"},{"type":"UnityEngine.GameObject","value":{"$content":2,"$type":"UnityEngine.Object"},"defaultValues":{},"position":{"x":-623.0,"y":97.0},"guid":"41fd9845-4d21-43bf-bb8c-489fcff46cf2","$version":"A","$type":"Unity.VisualScripting.Literal","$id":"24"},{"sourceUnit":{"$ref":"10"},"sourceKey":"trigger","destinationUnit":{"$ref":"12"},"destinationKey":"inputTrigger","guid":"d75ce503-6094-4bbf-80b5-b60c2cb29f27","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"14"},"sourceKey":"trigger","destinationUnit":{"$ref":"16"},"destinationKey":"enter","guid":"484b607f-a56b-47a8-8f1f-47f6727e63b3","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"20"},"sourceKey":"output","destinationUnit":{"$ref":"16"},"destinationKey":"target","guid":"b465e26c-a14c-4f12-861d-394648e76af7","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"22"},"sourceKey":"output","destinationUnit":{"$ref":"14"},"destinationKey":"TaskReference","guid":"0d616eaa-a007-43e2-b0bd-d38dd37b10c6","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"24"},"sourceKey":"output","destinationUnit":{"$ref":"12"},"destinationKey":"TaskToComplete","guid":"d6df762e-4e24-433e-b1f2-5fcacd1b9240","$type":"Unity.VisualScripting.ValueConnection"}],"$version":"A"}}}'
+    _json: '{"nest":{"source":"Embed","macro":null,"embed":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":65.32465,"y":-61.98611},"zoom":0.6999999,"elements":[{"coroutine":false,"defaultValues":{},"position":{"x":-619.0,"y":-105.0},"guid":"9f9f9b12-0219-4174-a53e-7cbf36b8c943","$version":"A","$type":"Reflectis.CreatorKit.Core.OnManipulationStartEventUnit","$id":"10"},{"defaultValues":{"TaskToComplete":null},"position":{"x":-385.0,"y":-28.0},"guid":"4bfb403b-390a-432a-9a7a-864987da0826","$version":"A","$type":"Reflectis.SDK.TasksReflectis.CompleteTaskEventUnit","$id":"12"},{"coroutine":false,"defaultValues":{"TaskReference":null},"position":{"x":7.0,"y":-236.0},"guid":"62fe36d5-eaf2-4161-a5e7-dffa8cc40708","$version":"A","$type":"Reflectis.SDK.TasksReflectis.OnTaskCompletedEventUnit","$id":"14"},{"chainable":false,"parameterNames":["value"],"member":{"name":"SetActive","parameterTypes":["System.Boolean"],"targetType":"UnityEngine.GameObject","targetTypeName":"UnityEngine.GameObject","$version":"A"},"defaultValues":{"target":null,"%value":{"$content":true,"$type":"System.Boolean"}},"position":{"x":315.0,"y":-152.0},"guid":"9a13155b-1572-4233-b2c2-e4485256138c","$version":"A","$type":"Unity.VisualScripting.InvokeMember","$id":"16"},{"type":"UnityEngine.GameObject","value":{"$content":0,"$type":"UnityEngine.Object"},"defaultValues":{},"position":{"x":108.0,"y":-51.0},"guid":"1574ab27-4441-4c0b-be8a-aad6f65fa89b","$version":"A","$type":"Unity.VisualScripting.Literal","$id":"20"},{"type":"UnityEngine.GameObject","value":{"$content":1,"$type":"UnityEngine.Object"},"defaultValues":{},"position":{"x":-223.0,"y":-239.0},"guid":"779d83ec-4dc3-489e-bd49-889e85b289a8","$version":"A","$type":"Unity.VisualScripting.Literal","$id":"22"},{"type":"UnityEngine.GameObject","value":{"$content":2,"$type":"UnityEngine.Object"},"defaultValues":{},"position":{"x":-623.0,"y":97.0},"guid":"41fd9845-4d21-43bf-bb8c-489fcff46cf2","$version":"A","$type":"Unity.VisualScripting.Literal","$id":"24"},{"sourceUnit":{"$ref":"10"},"sourceKey":"trigger","destinationUnit":{"$ref":"12"},"destinationKey":"inputTrigger","guid":"d75ce503-6094-4bbf-80b5-b60c2cb29f27","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"14"},"sourceKey":"trigger","destinationUnit":{"$ref":"16"},"destinationKey":"enter","guid":"484b607f-a56b-47a8-8f1f-47f6727e63b3","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"20"},"sourceKey":"output","destinationUnit":{"$ref":"16"},"destinationKey":"target","guid":"b465e26c-a14c-4f12-861d-394648e76af7","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"22"},"sourceKey":"output","destinationUnit":{"$ref":"14"},"destinationKey":"TaskReference","guid":"0d616eaa-a007-43e2-b0bd-d38dd37b10c6","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"24"},"sourceKey":"output","destinationUnit":{"$ref":"12"},"destinationKey":"TaskToComplete","guid":"d6df762e-4e24-433e-b1f2-5fcacd1b9240","$type":"Unity.VisualScripting.ValueConnection"}],"$version":"A"}}}'
     _objectReferences:
     - {fileID: 0}
     - {fileID: 1493097372}
@@ -1706,7 +1706,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1731113464}
-        m_TargetAssemblyTypeName: Reflectis.PLG.Tasks.Task, Reflectis.PLG.Tasks
+        m_TargetAssemblyTypeName: Reflectis.SDK.Tasks.Task, Reflectis.SDK.Tasks
         m_MethodName: CompleteTask
         m_Mode: 1
         m_Arguments:
@@ -2216,7 +2216,7 @@ MonoBehaviour:
     version: 2
     RefIds:
     - rid: 2588566437349556271
-      type: {class: TaskNode, ns: Reflectis.PLG.Tasks, asm: Reflectis.PLG.Tasks}
+      type: {class: TaskNode, ns: Reflectis.SDK.Tasks, asm: Reflectis.SDK.Tasks}
       data:
         guid: 4e50f89e-a43f-4535-8b1e-59937e2dad61
         name: VisualScriptTask
@@ -2244,14 +2244,14 @@ MonoBehaviour:
           m_PersistentCalls:
             m_Calls: []
     - rid: 2588566461751230471
-      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.PLG.Graphs,
-        asm: Reflectis.PLG.Graphs}
+      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.SDK.Graphs,
+        asm: Reflectis.SDK.Graphs}
       data:
         nodeContainer: {fileID: 1493097373}
         portName: input
     - rid: 2588566461751230472
-      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.PLG.Graphs,
-        asm: Reflectis.PLG.Graphs}
+      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.SDK.Graphs,
+        asm: Reflectis.SDK.Graphs}
       data:
         nodeContainer: {fileID: 1057815564}
         portName: next
@@ -2350,7 +2350,7 @@ MonoBehaviour:
     version: 2
     RefIds:
     - rid: 2588566437349556300
-      type: {class: TaskNode, ns: Reflectis.PLG.Tasks, asm: Reflectis.PLG.Tasks}
+      type: {class: TaskNode, ns: Reflectis.SDK.Tasks, asm: Reflectis.SDK.Tasks}
       data:
         guid: a6dab9a8-3a37-4463-84f4-55464b6b6371
         name: BoxesTask
@@ -2380,26 +2380,26 @@ MonoBehaviour:
           m_PersistentCalls:
             m_Calls: []
     - rid: 2588566437349556301
-      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.PLG.Graphs,
-        asm: Reflectis.PLG.Graphs}
+      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.SDK.Graphs,
+        asm: Reflectis.SDK.Graphs}
       data:
         nodeContainer: {fileID: 783750438}
         portName: next
     - rid: 2588566437349556309
-      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.PLG.Graphs,
-        asm: Reflectis.PLG.Graphs}
+      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.SDK.Graphs,
+        asm: Reflectis.SDK.Graphs}
       data:
         nodeContainer: {fileID: 931979832}
         portName: input
     - rid: 2588566437349556310
-      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.PLG.Graphs,
-        asm: Reflectis.PLG.Graphs}
+      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.SDK.Graphs,
+        asm: Reflectis.SDK.Graphs}
       data:
         nodeContainer: {fileID: 1980960896}
         portName: input
     - rid: 2588566461751230469
-      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.PLG.Graphs,
-        asm: Reflectis.PLG.Graphs}
+      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.SDK.Graphs,
+        asm: Reflectis.SDK.Graphs}
       data:
         nodeContainer: {fileID: 1950579960}
         portName: input
@@ -2804,7 +2804,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 931979832}
-        m_TargetAssemblyTypeName: Reflectis.PLG.Tasks.Task, Reflectis.PLG.Tasks
+        m_TargetAssemblyTypeName: Reflectis.SDK.Tasks.Task, Reflectis.SDK.Tasks
         m_MethodName: CompleteTask
         m_Mode: 1
         m_Arguments:
@@ -3157,7 +3157,7 @@ MonoBehaviour:
     version: 2
     RefIds:
     - rid: 2588566437349556234
-      type: {class: GrabTaskNode, ns: Reflectis.PLG.TasksReflectis, asm: Reflectis.PLG.TasksReflectis}
+      type: {class: GrabTaskNode, ns: Reflectis.SDK.TasksReflectis, asm: Reflectis.SDK.TasksReflectis}
       data:
         guid: 05f678c9-f8d3-4da9-8258-eca74e5edd07
         name: Grab Task Node
@@ -3185,14 +3185,14 @@ MonoBehaviour:
           m_PersistentCalls:
             m_Calls: []
     - rid: 2588566437349556288
-      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.PLG.Graphs,
-        asm: Reflectis.PLG.Graphs}
+      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.SDK.Graphs,
+        asm: Reflectis.SDK.Graphs}
       data:
         nodeContainer: {fileID: 783750438}
         portName: dependencies
     - rid: 2588566437349556289
-      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.PLG.Graphs,
-        asm: Reflectis.PLG.Graphs}
+      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.SDK.Graphs,
+        asm: Reflectis.SDK.Graphs}
       data:
         nodeContainer: {fileID: 734901651}
         portName: input
@@ -3596,7 +3596,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1950579960}
-        m_TargetAssemblyTypeName: Reflectis.PLG.Tasks.Task, Reflectis.PLG.Tasks
+        m_TargetAssemblyTypeName: Reflectis.SDK.Tasks.Task, Reflectis.SDK.Tasks
         m_MethodName: CompleteTask
         m_Mode: 1
         m_Arguments:
@@ -3812,7 +3812,7 @@ MonoBehaviour:
     version: 2
     RefIds:
     - rid: 2588566437349556241
-      type: {class: TriggerTaskNode, ns: Reflectis.PLG.TasksReflectis, asm: Reflectis.PLG.TasksReflectis}
+      type: {class: TriggerTaskNode, ns: Reflectis.SDK.TasksReflectis, asm: Reflectis.SDK.TasksReflectis}
       data:
         guid: c7fdd560-8e01-4c46-be5c-f2cec504d8d3
         name: Trigger Task Node
@@ -3840,14 +3840,14 @@ MonoBehaviour:
           m_PersistentCalls:
             m_Calls: []
     - rid: 2588566437349556290
-      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.PLG.Graphs,
-        asm: Reflectis.PLG.Graphs}
+      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.SDK.Graphs,
+        asm: Reflectis.SDK.Graphs}
       data:
         nodeContainer: {fileID: 783750438}
         portName: dependencies
     - rid: 2588566437349556291
-      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.PLG.Graphs,
-        asm: Reflectis.PLG.Graphs}
+      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.SDK.Graphs,
+        asm: Reflectis.SDK.Graphs}
       data:
         nodeContainer: {fileID: 618231720}
         portName: next
@@ -4047,7 +4047,7 @@ MonoBehaviour:
     version: 2
     RefIds:
     - rid: 2588566437349556229
-      type: {class: TaskNode, ns: Reflectis.PLG.Tasks, asm: Reflectis.PLG.Tasks}
+      type: {class: TaskNode, ns: Reflectis.SDK.Tasks, asm: Reflectis.SDK.Tasks}
       data:
         guid: ce02729d-ee3d-4b8a-8a03-6dda911c662f
         name: YellowBoxTask
@@ -4076,20 +4076,20 @@ MonoBehaviour:
           m_PersistentCalls:
             m_Calls: []
     - rid: 2588566437349556293
-      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.PLG.Graphs,
-        asm: Reflectis.PLG.Graphs}
+      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.SDK.Graphs,
+        asm: Reflectis.SDK.Graphs}
       data:
         nodeContainer: {fileID: 618231720}
         portName: input
     - rid: 2588566437349556294
-      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.PLG.Graphs,
-        asm: Reflectis.PLG.Graphs}
+      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.SDK.Graphs,
+        asm: Reflectis.SDK.Graphs}
       data:
         nodeContainer: {fileID: 734901651}
         portName: input
     - rid: 2588566437349556307
-      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.PLG.Graphs,
-        asm: Reflectis.PLG.Graphs}
+      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.SDK.Graphs,
+        asm: Reflectis.SDK.Graphs}
       data:
         nodeContainer: {fileID: 422929409}
         portName: input
@@ -4355,7 +4355,7 @@ MonoBehaviour:
     version: 2
     RefIds:
     - rid: 2588566437349556303
-      type: {class: TaskNode, ns: Reflectis.PLG.Tasks, asm: Reflectis.PLG.Tasks}
+      type: {class: TaskNode, ns: Reflectis.SDK.Tasks, asm: Reflectis.SDK.Tasks}
       data:
         guid: e8f3d0c2-7f29-41f5-8340-0a7a6f85a094
         name: WhiteBoxTask
@@ -4383,14 +4383,14 @@ MonoBehaviour:
           m_PersistentCalls:
             m_Calls: []
     - rid: 2588566437349556305
-      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.PLG.Graphs,
-        asm: Reflectis.PLG.Graphs}
+      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.SDK.Graphs,
+        asm: Reflectis.SDK.Graphs}
       data:
         nodeContainer: {fileID: 422929409}
         portName: dependencies
     - rid: 2588566437349556306
-      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.PLG.Graphs,
-        asm: Reflectis.PLG.Graphs}
+      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.SDK.Graphs,
+        asm: Reflectis.SDK.Graphs}
       data:
         nodeContainer: {fileID: 1980960896}
         portName: input
@@ -4516,7 +4516,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 103944926}
-        m_TargetAssemblyTypeName: Reflectis.PLG.Tasks.Task, Reflectis.PLG.Tasks
+        m_TargetAssemblyTypeName: Reflectis.SDK.Tasks.Task, Reflectis.SDK.Tasks
         m_MethodName: CompleteTask
         m_Mode: 1
         m_Arguments:
@@ -4950,7 +4950,7 @@ MonoBehaviour:
     version: 2
     RefIds:
     - rid: 2588566437349556260
-      type: {class: TaskNode, ns: Reflectis.PLG.Tasks, asm: Reflectis.PLG.Tasks}
+      type: {class: TaskNode, ns: Reflectis.SDK.Tasks, asm: Reflectis.SDK.Tasks}
       data:
         guid: 8e23d9a3-509a-4acc-ba56-202258701dd8
         name: UI Task Node
@@ -4980,26 +4980,26 @@ MonoBehaviour:
           m_PersistentCalls:
             m_Calls: []
     - rid: 2588566437349556268
-      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.PLG.Graphs,
-        asm: Reflectis.PLG.Graphs}
+      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.SDK.Graphs,
+        asm: Reflectis.SDK.Graphs}
       data:
         nodeContainer: {fileID: 103944926}
         portName: input
     - rid: 2588566437349556269
-      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.PLG.Graphs,
-        asm: Reflectis.PLG.Graphs}
+      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.SDK.Graphs,
+        asm: Reflectis.SDK.Graphs}
       data:
         nodeContainer: {fileID: 1731113464}
         portName: input
     - rid: 2588566461751230468
-      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.PLG.Graphs,
-        asm: Reflectis.PLG.Graphs}
+      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.SDK.Graphs,
+        asm: Reflectis.SDK.Graphs}
       data:
         nodeContainer: {fileID: 1267861232}
         portName: next
     - rid: 2588566461751230473
-      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.PLG.Graphs,
-        asm: Reflectis.PLG.Graphs}
+      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.SDK.Graphs,
+        asm: Reflectis.SDK.Graphs}
       data:
         nodeContainer: {fileID: 406876715}
         portName: input
@@ -10119,7 +10119,7 @@ MonoBehaviour:
     version: 2
     RefIds:
     - rid: 2588566437349556230
-      type: {class: TimerTaskNode, ns: Reflectis.PLG.TasksReflectis, asm: Reflectis.PLG.TasksReflectis}
+      type: {class: TimerTaskNode, ns: Reflectis.SDK.TasksReflectis, asm: Reflectis.SDK.TasksReflectis}
       data:
         guid: e18eb74e-a5e9-4f24-8ddc-c124348b2033
         name: Timer Task Node
@@ -10147,14 +10147,14 @@ MonoBehaviour:
           m_PersistentCalls:
             m_Calls: []
     - rid: 2588566461751230464
-      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.PLG.Graphs,
-        asm: Reflectis.PLG.Graphs}
+      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.SDK.Graphs,
+        asm: Reflectis.SDK.Graphs}
       data:
         nodeContainer: {fileID: 1950579960}
         portName: next
     - rid: 2588566461751230465
-      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.PLG.Graphs,
-        asm: Reflectis.PLG.Graphs}
+      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.SDK.Graphs,
+        asm: Reflectis.SDK.Graphs}
       data:
         nodeContainer: {fileID: 1057815564}
         portName: input
@@ -11071,7 +11071,7 @@ MonoBehaviour:
     version: 2
     RefIds:
     - rid: 2588566437349556296
-      type: {class: GrabTaskNode, ns: Reflectis.PLG.TasksReflectis, asm: Reflectis.PLG.TasksReflectis}
+      type: {class: GrabTaskNode, ns: Reflectis.SDK.TasksReflectis, asm: Reflectis.SDK.TasksReflectis}
       data:
         guid: 6e9edc9e-3383-4507-b296-7d9e900861f7
         name: VSScriptGrabTask
@@ -11098,8 +11098,8 @@ MonoBehaviour:
           m_PersistentCalls:
             m_Calls: []
     - rid: 2588566461751230470
-      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.PLG.Graphs,
-        asm: Reflectis.PLG.Graphs}
+      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.SDK.Graphs,
+        asm: Reflectis.SDK.Graphs}
       data:
         nodeContainer: {fileID: 406876715}
         portName: dependencies
@@ -11598,7 +11598,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1267861232}
-        m_TargetAssemblyTypeName: Reflectis.PLG.Tasks.Task, Reflectis.PLG.Tasks
+        m_TargetAssemblyTypeName: Reflectis.SDK.Tasks.Task, Reflectis.SDK.Tasks
         m_MethodName: CompleteTask
         m_Mode: 1
         m_Arguments:
@@ -12042,7 +12042,7 @@ MonoBehaviour:
     version: 2
     RefIds:
     - rid: 2588566437349556264
-      type: {class: TaskNode, ns: Reflectis.PLG.Tasks, asm: Reflectis.PLG.Tasks}
+      type: {class: TaskNode, ns: Reflectis.SDK.Tasks, asm: Reflectis.SDK.Tasks}
       data:
         guid: 1d3ccb9c-656c-40e0-9c9a-7c53b83ea5bb
         name: PressSecondButtonTask
@@ -12070,14 +12070,14 @@ MonoBehaviour:
           m_PersistentCalls:
             m_Calls: []
     - rid: 2588566437349556265
-      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.PLG.Graphs,
-        asm: Reflectis.PLG.Graphs}
+      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.SDK.Graphs,
+        asm: Reflectis.SDK.Graphs}
       data:
         nodeContainer: {fileID: 1057815564}
         portName: dependencies
     - rid: 2588566437349556266
-      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.PLG.Graphs,
-        asm: Reflectis.PLG.Graphs}
+      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.SDK.Graphs,
+        asm: Reflectis.SDK.Graphs}
       data:
         nodeContainer: {fileID: 103944926}
         portName: next
@@ -12389,7 +12389,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 618231720}
-        m_TargetAssemblyTypeName: Reflectis.PLG.Tasks.Task, Reflectis.PLG.Tasks
+        m_TargetAssemblyTypeName: Reflectis.SDK.Tasks.Task, Reflectis.SDK.Tasks
         m_MethodName: CompleteTask
         m_Mode: 1
         m_Arguments:
@@ -12407,7 +12407,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 618231720}
-        m_TargetAssemblyTypeName: Reflectis.PLG.Tasks.Task, Reflectis.PLG.Tasks
+        m_TargetAssemblyTypeName: Reflectis.SDK.Tasks.Task, Reflectis.SDK.Tasks
         m_MethodName: CompleteTask
         m_Mode: 1
         m_Arguments:
@@ -12789,7 +12789,7 @@ MonoBehaviour:
     version: 2
     RefIds:
     - rid: 2588566437349556255
-      type: {class: TaskNode, ns: Reflectis.PLG.Tasks, asm: Reflectis.PLG.Tasks}
+      type: {class: TaskNode, ns: Reflectis.SDK.Tasks, asm: Reflectis.SDK.Tasks}
       data:
         guid: 47dd9a06-5013-418e-97b5-23c419257dea
         name: Animator Task Node
@@ -12817,14 +12817,14 @@ MonoBehaviour:
           m_PersistentCalls:
             m_Calls: []
     - rid: 2588566461751230466
-      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.PLG.Graphs,
-        asm: Reflectis.PLG.Graphs}
+      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.SDK.Graphs,
+        asm: Reflectis.SDK.Graphs}
       data:
         nodeContainer: {fileID: 422929409}
         portName: next
     - rid: 2588566461751230467
-      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.PLG.Graphs,
-        asm: Reflectis.PLG.Graphs}
+      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.SDK.Graphs,
+        asm: Reflectis.SDK.Graphs}
       data:
         nodeContainer: {fileID: 1267861232}
         portName: input
@@ -13026,7 +13026,7 @@ MonoBehaviour:
     version: 2
     RefIds:
     - rid: 2588566437349556304
-      type: {class: TaskNode, ns: Reflectis.PLG.Tasks, asm: Reflectis.PLG.Tasks}
+      type: {class: TaskNode, ns: Reflectis.SDK.Tasks, asm: Reflectis.SDK.Tasks}
       data:
         guid: c54a01c5-5b45-428e-92f3-3dd9505fbc65
         name: BlackBoxTask
@@ -13054,14 +13054,14 @@ MonoBehaviour:
           m_PersistentCalls:
             m_Calls: []
     - rid: 2588566437349556311
-      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.PLG.Graphs,
-        asm: Reflectis.PLG.Graphs}
+      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.SDK.Graphs,
+        asm: Reflectis.SDK.Graphs}
       data:
         nodeContainer: {fileID: 422929409}
         portName: dependencies
     - rid: 2588566437349556312
-      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.PLG.Graphs,
-        asm: Reflectis.PLG.Graphs}
+      type: {class: GraphBehaviour/PortReferenceImplementation, ns: Reflectis.SDK.Graphs,
+        asm: Reflectis.SDK.Graphs}
       data:
         nodeContainer: {fileID: 931979832}
         portName: next
@@ -13594,7 +13594,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1980960896}
-        m_TargetAssemblyTypeName: Reflectis.PLG.Tasks.Task, Reflectis.PLG.Tasks
+        m_TargetAssemblyTypeName: Reflectis.SDK.Tasks.Task, Reflectis.SDK.Tasks
         m_MethodName: CompleteTask
         m_Mode: 1
         m_Arguments:
@@ -13673,7 +13673,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 734901651}
-        m_TargetAssemblyTypeName: Reflectis.PLG.Tasks.Task, Reflectis.PLG.Tasks
+        m_TargetAssemblyTypeName: Reflectis.SDK.Tasks.Task, Reflectis.SDK.Tasks
         m_MethodName: CompleteTask
         m_Mode: 1
         m_Arguments:

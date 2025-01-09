@@ -1,9 +1,9 @@
-using Reflectis.PLG.Graphs;
-using Reflectis.PLG.Tasks;
-using Reflectis.PLG.Tasks.Detectors;
+using Reflectis.SDK.Graphs;
+using Reflectis.SDK.Tasks;
+using Reflectis.SDK.Tasks.Detectors;
 using UnityEngine;
 
-namespace Reflectis.PLG.TasksReflectis
+namespace Reflectis.SDK.TasksReflectis
 {
     public class TriggerTaskReflectis : TaskReflectis, ITaskNode<TriggerTaskNode>
     {

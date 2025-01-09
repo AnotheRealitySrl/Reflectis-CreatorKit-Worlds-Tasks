@@ -1,9 +1,9 @@
-using Reflectis.PLG.Tasks;
+using Reflectis.SDK.Tasks;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Reflectis.PLG.TasksReflectis
+namespace Reflectis.SDK.TasksReflectis
 {
     public class TaskReflectisStepSetter : TaskStepSetter
     {
@@ -17,10 +17,11 @@ namespace Reflectis.PLG.TasksReflectis
             {
                 StartCoroutine(WaitForRPCManager());
             }
-            
+
         }
 
-        private IEnumerator WaitForRPCManager(){
+        private IEnumerator WaitForRPCManager()
+        {
             while (rpcManagerInterface == null)
             {
                 rpcManagerInterface = systemReflectis.rpcManagerInterface;

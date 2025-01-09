@@ -1,12 +1,14 @@
-using Reflectis.PLG.Tasks;
-using Reflectis.PLG.Tasks.UI;
-using Reflectis.ClientModels;
+using Reflectis.CreatorKit.Core.ClientModels;
+using Reflectis.SDK.Tasks;
+using Reflectis.SDK.Tasks.UI;
 using Reflectis.SDK.Core;
+
 using System.Collections;
+
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Reflectis.PLG.TasksReflectis
+namespace Reflectis.SDK.TasksReflectis
 {
     public class TaskSystemReflectis : TaskSystem
     {
@@ -34,8 +36,8 @@ namespace Reflectis.PLG.TasksReflectis
         public UnityEvent OnTaskSystemReady => taskSystemReady;
 
 
-        //questo deve prendersi istanza dell'rpcManager che viene generato tramite il placeholder, in realtà si piglia l'interfaccia. 
-        //dovrò poi aspettare che mi arrivi questo componennt prima di fare il Prepare nel caso in cui io sia networkato
+        //questo deve prendersi istanza dell'rpcManager che viene generato tramite il placeholder, in realtï¿½ si piglia l'interfaccia. 
+        //dovrï¿½ poi aspettare che mi arrivi questo componennt prima di fare il Prepare nel caso in cui io sia networkato
 
         protected override void Awake()
         {

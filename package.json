@@ -1,16 +1,16 @@
 {
-  "name": "com.anotherealitysrl.reflectis-plg-tasksreflectis",
-  "displayName": "Reflectis-PLG-TasksReflectis",
+  "name": "com.anotherealitysrl.reflectis-creatorkit-tasks",
+  "displayName": "Reflectis-CreatorKit-Tasks",
   "version": "1.2.0",
   "unity": "2020.1",
-  "description": "Reflectis-PLG-TasksReflectis",
+  "description": "Reflectis-CreatorKit-Tasks",
   "keywords": [
     "unity"
   ],
   "category": "Unity",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AnotheRealitySrl/Reflectis-PLG-TasksReflectis"
+    "url": "https://github.com/AnotheRealitySrl/Reflectis-SDK-TasksReflectis"
   },
   "samples": [
     {
@@ -18,6 +18,5 @@
       "description": "Contains a sample scene to show how to use the task system",
       "path": "TaskSampleScene~"
     }
-
   ]
 }

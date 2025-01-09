@@ -1,6 +1,6 @@
-using Reflectis.PLG.Tasks;
+using Reflectis.SDK.Tasks;
 
-namespace Reflectis.PLG.TasksReflectis
+namespace Reflectis.SDK.TasksReflectis
 {
     public class AnimatorTaskNode : TaskNode
     {

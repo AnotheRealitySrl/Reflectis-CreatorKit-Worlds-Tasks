@@ -1,11 +1,13 @@
 
-using Reflectis.SDK.CreatorKit;
-using Reflectis.SDK.InteractionNew;
+using Reflectis.SDK.Core.Interaction;
+using Reflectis.CreatorKit.Core;
+
 using UnityEngine;
 using UnityEngine.Events;
-using static Reflectis.SDK.InteractionNew.IInteractable;
 
-namespace Reflectis.PLG.TasksReflectis
+using static Reflectis.SDK.Core.Interaction.IInteractable;
+
+namespace Reflectis.SDK.TasksReflectis
 {
     public class ManipulableGrabberDetector : MonoBehaviour
     {
