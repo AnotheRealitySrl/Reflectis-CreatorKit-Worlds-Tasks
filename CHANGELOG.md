@@ -1,4 +1,10 @@
-# Reflectis-SDK-TasksReflectis
+# Release notes
+
+## v2.0.0
+
+### Changed
+
+- Changed package name, from Reflectis-PLG-TasksReflectis to Reflecits-CreatorKit-Tasks, and updated namespaces according to new package name.
 
 ## v1.2.0
 
