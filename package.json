@@ -1,16 +1,16 @@
 {
-  "name": "com.anotherealitysrl.reflectis-creatorkit-tasks",
-  "displayName": "Reflectis-CreatorKit-Tasks",
+  "name": "com.anotherealitysrl.reflectis-creatorkit-worlds-tasks",
+  "displayName": "Reflectis-CreatorKit-Worlds-Tasks",
   "version": "1.2.0",
   "unity": "2020.1",
-  "description": "Reflectis-CreatorKit-Tasks",
+  "description": "Reflectis CreatorKis Worlds Tasks module",
   "keywords": [
     "unity"
   ],
   "category": "Unity",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AnotheRealitySrl/Reflectis-SDK-TasksReflectis"
+    "url": "https://github.com/AnotheRealitySrl/Reflectis-CreatorKit-Worlds-Tasks"
   },
   "samples": [
     {
