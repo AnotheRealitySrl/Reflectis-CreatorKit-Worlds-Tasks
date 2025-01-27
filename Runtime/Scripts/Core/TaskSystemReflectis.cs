@@ -61,6 +61,11 @@ namespace Reflectis.SDK.TasksReflectis
 
             //TODO wait for all taskNode to update their descriptions....
 
+            if (isNetworked)
+            {
+                StartCoroutine(AddRevertCallbacks());
+            }
+
             base.Awake();
         }
 
@@ -73,10 +78,16 @@ namespace Reflectis.SDK.TasksReflectis
                     yield return null;
                 }
                 rpcManagerInterface = gameObject.GetComponent<ITasksRPCManager>();
-
-
-                rpcManagerInterface.SetOnRevert(base.Revert);
             }
+        }
+
+        public IEnumerator AddRevertCallbacks()
+        {
+            if (rpcManagerInterface == null)
+            {
+                yield return StartCoroutine(WaitForRPCManager());
+            }
+            rpcManagerInterface.SetOnRevert(base.Revert);
         }
 
         //function called when the descriptions on the tasks have been initialized in the localizeTaskBridge
