@@ -1,5 +1,9 @@
 # Release notes
 
+## v2.0.1
+### Fixed
+- Now reverting tasks only reverts them one time. Fixed in `TaskSystemReflectis`
+
 ## v2.0.0
 
 ### Changed
