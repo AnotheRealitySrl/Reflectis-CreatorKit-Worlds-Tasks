@@ -1,6 +1,6 @@
 using Reflectis.SDK.Tasks;
 
-namespace Reflectis.SDK.TasksReflectis
+namespace Reflectis.CreatorKit.Worlds.Tasks
 {
     public class GrabTaskNode : TaskNode
     {

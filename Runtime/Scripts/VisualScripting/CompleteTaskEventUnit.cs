@@ -1,7 +1,7 @@
 using Reflectis.SDK.Tasks;
 using Unity.VisualScripting;
 
-namespace Reflectis.SDK.TasksReflectis
+namespace Reflectis.CreatorKit.Worlds.Tasks
 {
     [UnitTitle("Reflectis Tasks: CompleteTask")]
     [UnitSurtitle("Tasks")]

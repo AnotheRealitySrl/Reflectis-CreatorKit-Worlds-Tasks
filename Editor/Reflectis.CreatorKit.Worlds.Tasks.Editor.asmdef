@@ -1,6 +1,6 @@
 {
-  "name": "Reflectis.SDK.TasksReflectis.Editor",
-  "rootNamespace": "Reflectis.SDK.TasksReflectisEditor",
+  "name": "Reflectis.CreatorKit.Worlds.Tasks.Editor",
+  "rootNamespace": "Reflectis.CreatorKit.Worlds.TasksEditor",
   "references": [
     "GUID:213a20fc7dc3c964ea49c0cdd8d72aa5",
     "GUID:40fa99dae01a17147ab87fa6da4d559c"

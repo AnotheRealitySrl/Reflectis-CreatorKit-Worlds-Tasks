@@ -8,7 +8,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Reflectis.SDK.TasksReflectis
+namespace Reflectis.CreatorKit.Worlds.Tasks
 {
     public class TaskSystemReflectis : TaskSystem
     {

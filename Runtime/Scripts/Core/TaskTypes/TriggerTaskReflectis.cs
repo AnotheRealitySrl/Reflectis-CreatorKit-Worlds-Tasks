@@ -3,7 +3,7 @@ using Reflectis.SDK.Tasks;
 using Reflectis.SDK.Tasks.Detectors;
 using UnityEngine;
 
-namespace Reflectis.SDK.TasksReflectis
+namespace Reflectis.CreatorKit.Worlds.Tasks
 {
     public class TriggerTaskReflectis : TaskReflectis, ITaskNode<TriggerTaskNode>
     {
