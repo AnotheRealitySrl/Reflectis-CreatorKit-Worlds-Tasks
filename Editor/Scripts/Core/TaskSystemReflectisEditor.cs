@@ -1,8 +1,8 @@
-﻿using Reflectis.CreatorKit.Worlds.Tasks;
-using UnityEditor;
-using UnityEngine;
+﻿using Reflectis.SDK.Tasks.Editor;
 
-namespace Reflectis.SDK.TasksEditor
+using UnityEditor;
+
+namespace Reflectis.CreatorKit.Worlds.Tasks.Editor
 {
     [CustomEditor(typeof(TaskSystemReflectis))]
     public class TaskSystemReflectisEditor : TaskSystemEditor { }
