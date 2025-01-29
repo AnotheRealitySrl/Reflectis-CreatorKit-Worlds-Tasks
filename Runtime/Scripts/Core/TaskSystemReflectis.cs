@@ -1,14 +1,14 @@
-using Reflectis.CreatorKit.Core.ClientModels;
+using Reflectis.CreatorKit.Worlds.Core.ClientModels;
+using Reflectis.SDK.Core.SystemFramework;
 using Reflectis.SDK.Tasks;
 using Reflectis.SDK.Tasks.UI;
-using Reflectis.SDK.Core;
 
 using System.Collections;
 
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Reflectis.SDK.TasksReflectis
+namespace Reflectis.CreatorKit.Worlds.Tasks
 {
     public class TaskSystemReflectis : TaskSystem
     {

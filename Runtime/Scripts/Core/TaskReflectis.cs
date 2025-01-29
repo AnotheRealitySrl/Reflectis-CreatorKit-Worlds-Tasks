@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using static Reflectis.SDK.Tasks.TaskNode;
 
-namespace Reflectis.SDK.TasksReflectis
+namespace Reflectis.CreatorKit.Worlds.Tasks
 {
     public class TaskReflectis : Task
     {

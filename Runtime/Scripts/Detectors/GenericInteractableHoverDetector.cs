@@ -1,12 +1,12 @@
+using Reflectis.CreatorKit.Worlds.Placeholders;
 using Reflectis.SDK.Core.Interaction;
-using Reflectis.CreatorKit.Core;
 
 using UnityEngine;
 using UnityEngine.Events;
 
 using static Reflectis.SDK.Core.Interaction.IInteractable;
 
-namespace Reflectis.SDK.TasksReflectis
+namespace Reflectis.CreatorKit.Worlds.Tasks
 {
     public class GenericInteractableHoverDetector : MonoBehaviour
     {
