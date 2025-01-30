@@ -1,11 +1,11 @@
 
+using Reflectis.CreatorKit.Worlds.Core.Interaction;
 using Reflectis.CreatorKit.Worlds.Placeholders;
-using Reflectis.SDK.Core.Interaction;
 
 using UnityEngine;
 using UnityEngine.Events;
 
-using static Reflectis.SDK.Core.Interaction.IInteractable;
+using static Reflectis.CreatorKit.Worlds.Core.Interaction.IInteractable;
 
 namespace Reflectis.CreatorKit.Worlds.Tasks
 {
@@ -33,9 +33,9 @@ namespace Reflectis.CreatorKit.Worlds.Tasks
             //gameObject.GetOrAddComponent<Grabbable>();
 
             //add OnGrabEvent to the Manipulable. The ManipulableVR and ManipulableDesktop will have a callback on that event
-            Manipulable manipulable = interactablePlaceholder.gameObject.GetComponent<Manipulable>();
+            IManipulable manipulable = interactablePlaceholder.gameObject.GetComponent<IManipulable>();
 
-            if (manipulable)
+            if (manipulable != null)
             {
                 if (manipulable.OnGrabManipulableStart == null)
                 {
@@ -55,9 +55,9 @@ namespace Reflectis.CreatorKit.Worlds.Tasks
 
         public void OnDisable()
         {
-            Manipulable manipulable = interactablePlaceholder.gameObject.GetComponent<Manipulable>();
+            IManipulable manipulable = interactablePlaceholder.gameObject.GetComponent<IManipulable>();
 
-            if (manipulable)
+            if (manipulable != null)
             {
                 if (manipulable.OnGrabManipulableStart == null)
                 {
