@@ -8,7 +8,7 @@ using static Reflectis.CreatorKit.Worlds.Core.Interaction.IInteractable;
 
 namespace Reflectis.CreatorKit.Worlds.Tasks
 {
-    public class GenericInteractableHoverDetector : MonoBehaviour
+    public class VisualScriptingInteractableHoverDetector : MonoBehaviour
     {
         public InteractablePlaceholder interactablePlaceholder;
         [SerializeField]
@@ -24,7 +24,7 @@ namespace Reflectis.CreatorKit.Worlds.Tasks
         // Start is called before the first frame update
         void Start()
         {
-            if (interactablePlaceholder.InteractionModes.HasFlag(EInteractableType.GenericInteractable))
+            if (interactablePlaceholder.InteractionModes.HasFlag(EInteractableType.VisualScriptingInteractable))
             {
                 interactablePlaceholder.OnSetupFinished.AddListener(OnSetupFinished);
             }
