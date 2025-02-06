@@ -1,22 +1,22 @@
 {
-  "name": "Reflectis.CreatorKit.Worlds.Tasks",
-  "rootNamespace": "Reflectis.CreatorKit.Worlds.Tasks",
-  "references": [
-    "GUID:d144e5d8e92d0bc419736e72debb4e2a",
-    "GUID:ab59f74e483e1ee4595bfefea56493f2",
-    "GUID:fe738984b0c28c342b0d3d49a82efa50",
-    "GUID:23c385269eb2e5044a0a2686aeeaf762",
-    "GUID:e1e4f83f6c2796445b9ea45a4dca9090",
-    "GUID:21b0c8d1703a94250bfac916590cea4f",
-    "GUID:ea715009a4efd4c6cbc85be3ae097dd3"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "Reflectis.CreatorKit.Worlds.Tasks",
+    "rootNamespace": "Reflectis.CreatorKit.Worlds.Tasks",
+    "references": [
+        "GUID:d144e5d8e92d0bc419736e72debb4e2a",
+        "GUID:ab59f74e483e1ee4595bfefea56493f2",
+        "GUID:fe738984b0c28c342b0d3d49a82efa50",
+        "GUID:23c385269eb2e5044a0a2686aeeaf762",
+        "GUID:e1e4f83f6c2796445b9ea45a4dca9090",
+        "GUID:21b0c8d1703a94250bfac916590cea4f",
+        "GUID:ea715009a4efd4c6cbc85be3ae097dd3"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
