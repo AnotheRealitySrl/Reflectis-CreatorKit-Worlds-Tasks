@@ -1,11 +1,14 @@
-using Reflectis.PLG.Tasks;
-using Reflectis.PLG.Tasks.UI;
-using Reflectis.SDK.Core;
+using Reflectis.CreatorKit.Worlds.Core.ClientModels;
+using Reflectis.SDK.Core.SystemFramework;
+using Reflectis.SDK.Tasks;
+using Reflectis.SDK.Tasks.UI;
+
 using System.Collections;
+
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Reflectis.PLG.TasksReflectis
+namespace Reflectis.CreatorKit.Worlds.Tasks
 {
     public class TaskSystemReflectis : TaskSystem
     {
@@ -24,7 +27,7 @@ namespace Reflectis.PLG.TasksReflectis
             }
             get
             {
-                return _isNetworked;
+                return _isNetworked && SM.GetSystem<IClientModelSystem>().CurrentEvent.Multiplayer;
             }
         }
 
@@ -33,8 +36,8 @@ namespace Reflectis.PLG.TasksReflectis
         public UnityEvent OnTaskSystemReady => taskSystemReady;
 
 
-        //questo deve prendersi istanza dell'rpcManager che viene generato tramite il placeholder, in realtà si piglia l'interfaccia. 
-        //dovrò poi aspettare che mi arrivi questo componennt prima di fare il Prepare nel caso in cui io sia networkato
+        //questo deve prendersi istanza dell'rpcManager che viene generato tramite il placeholder, in realtï¿½ si piglia l'interfaccia. 
+        //dovrï¿½ poi aspettare che mi arrivi questo componennt prima di fare il Prepare nel caso in cui io sia networkato
 
         protected override void Awake()
         {
@@ -58,6 +61,11 @@ namespace Reflectis.PLG.TasksReflectis
 
             //TODO wait for all taskNode to update their descriptions....
 
+            if (isNetworked)
+            {
+                StartCoroutine(AddRevertCallbacks());
+            }
+
             base.Awake();
         }
 
@@ -70,10 +78,16 @@ namespace Reflectis.PLG.TasksReflectis
                     yield return null;
                 }
                 rpcManagerInterface = gameObject.GetComponent<ITasksRPCManager>();
-
-
-                rpcManagerInterface.SetOnRevert(base.Revert);
             }
+        }
+
+        public IEnumerator AddRevertCallbacks()
+        {
+            if (rpcManagerInterface == null)
+            {
+                yield return StartCoroutine(WaitForRPCManager());
+            }
+            rpcManagerInterface.SetOnRevert(base.Revert);
         }
 
         //function called when the descriptions on the tasks have been initialized in the localizeTaskBridge
@@ -101,7 +115,7 @@ namespace Reflectis.PLG.TasksReflectis
                 rpcManagerInterface.SendRPCTaskRevert();
                 rpcManagerInterface.UpdateTasksID(-1);
             }
-            base.Revert();        
+            base.Revert();
         }
 
         public void RebuildTaskUI()

@@ -1,7 +1,7 @@
-using Reflectis.PLG.Tasks;
+using Reflectis.SDK.Tasks;
 using Unity.VisualScripting;
 
-namespace Reflectis.PLG.TasksReflectis
+namespace Reflectis.CreatorKit.Worlds.Tasks
 {
     [UnitTitle("Reflectis Tasks: On Task System Ready")]
     [UnitSurtitle("Tasks")]

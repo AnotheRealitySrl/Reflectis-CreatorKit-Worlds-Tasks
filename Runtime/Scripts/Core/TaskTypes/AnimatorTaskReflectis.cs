@@ -1,8 +1,8 @@
-using Reflectis.PLG.Graphs;
-using Reflectis.PLG.Tasks;
+using Reflectis.SDK.Graphs;
+using Reflectis.SDK.Tasks;
 using UnityEngine;
 
-namespace Reflectis.PLG.TasksReflectis
+namespace Reflectis.CreatorKit.Worlds.Tasks
 {
     public class AnimatorTaskReflectis : TaskReflectis, ITaskNode<AnimatorTaskNode>
     {

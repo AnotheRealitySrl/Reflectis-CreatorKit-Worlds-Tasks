@@ -1,9 +1,9 @@
-using Reflectis.PLG.Tasks;
+using Reflectis.SDK.Tasks;
 using System.Collections;
 using UnityEngine;
-using static Reflectis.PLG.Tasks.TaskNode;
+using static Reflectis.SDK.Tasks.TaskNode;
 
-namespace Reflectis.PLG.TasksReflectis
+namespace Reflectis.CreatorKit.Worlds.Tasks
 {
     public class TaskReflectis : Task
     {
@@ -27,7 +27,7 @@ namespace Reflectis.PLG.TasksReflectis
 
         IEnumerator WaitForRPCManager()
         {
-            if(taskSystem)
+            if (taskSystem)
                 StartCoroutine(taskSystem.WaitForRPCManager());
             while (rpcManagerInterface == null)
             {

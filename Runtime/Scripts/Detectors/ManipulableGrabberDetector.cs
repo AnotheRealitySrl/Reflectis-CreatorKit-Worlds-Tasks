@@ -1,11 +1,13 @@
 
-using Reflectis.SDK.CreatorKit;
-using Reflectis.SDK.InteractionNew;
+using Reflectis.CreatorKit.Worlds.Core.Interaction;
+using Reflectis.CreatorKit.Worlds.Placeholders;
+
 using UnityEngine;
 using UnityEngine.Events;
-using static Reflectis.SDK.InteractionNew.IInteractable;
 
-namespace Reflectis.PLG.TasksReflectis
+using static Reflectis.CreatorKit.Worlds.Core.Interaction.IInteractable;
+
+namespace Reflectis.CreatorKit.Worlds.Tasks
 {
     public class ManipulableGrabberDetector : MonoBehaviour
     {
@@ -31,9 +33,9 @@ namespace Reflectis.PLG.TasksReflectis
             //gameObject.GetOrAddComponent<Grabbable>();
 
             //add OnGrabEvent to the Manipulable. The ManipulableVR and ManipulableDesktop will have a callback on that event
-            Manipulable manipulable = interactablePlaceholder.gameObject.GetComponent<Manipulable>();
+            IManipulable manipulable = interactablePlaceholder.gameObject.GetComponent<IManipulable>();
 
-            if (manipulable)
+            if (manipulable != null)
             {
                 if (manipulable.OnGrabManipulableStart == null)
                 {
@@ -53,9 +55,9 @@ namespace Reflectis.PLG.TasksReflectis
 
         public void OnDisable()
         {
-            Manipulable manipulable = interactablePlaceholder.gameObject.GetComponent<Manipulable>();
+            IManipulable manipulable = interactablePlaceholder.gameObject.GetComponent<IManipulable>();
 
-            if (manipulable)
+            if (manipulable != null)
             {
                 if (manipulable.OnGrabManipulableStart == null)
                 {

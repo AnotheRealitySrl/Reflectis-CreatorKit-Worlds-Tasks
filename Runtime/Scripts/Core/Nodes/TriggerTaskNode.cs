@@ -1,6 +1,6 @@
-using Reflectis.PLG.Tasks;
+using Reflectis.SDK.Tasks;
 
-namespace Reflectis.PLG.TasksReflectis
+namespace Reflectis.CreatorKit.Worlds.Tasks
 {
     public class TriggerTaskNode : TaskNode
     {

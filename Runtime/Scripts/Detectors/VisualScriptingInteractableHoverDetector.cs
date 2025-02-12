@@ -1,14 +1,14 @@
-using Reflectis.SDK.CreatorKit;
-using Reflectis.SDK.InteractionNew;
-using System.Collections;
-using System.Collections.Generic;
+using Reflectis.CreatorKit.Worlds.Core.Interaction;
+using Reflectis.CreatorKit.Worlds.Placeholders;
+
 using UnityEngine;
-using static Reflectis.SDK.InteractionNew.IInteractable;
 using UnityEngine.Events;
 
-namespace Reflectis.PLG.TasksReflectis
+using static Reflectis.CreatorKit.Worlds.Core.Interaction.IInteractable;
+
+namespace Reflectis.CreatorKit.Worlds.Tasks
 {
-    public class GenericInteractableHoverDetector : MonoBehaviour
+    public class VisualScriptingInteractableHoverDetector : MonoBehaviour
     {
         public InteractablePlaceholder interactablePlaceholder;
         [SerializeField]
@@ -24,7 +24,7 @@ namespace Reflectis.PLG.TasksReflectis
         // Start is called before the first frame update
         void Start()
         {
-            if (interactablePlaceholder.InteractionModes.HasFlag(EInteractableType.GenericInteractable))
+            if (interactablePlaceholder.InteractionModes.HasFlag(EInteractableType.VisualScriptingInteractable))
             {
                 interactablePlaceholder.OnSetupFinished.AddListener(OnSetupFinished);
             }
@@ -33,9 +33,9 @@ namespace Reflectis.PLG.TasksReflectis
         public void OnSetupFinished()
         {
             //add OnGrabEvent to the Manipulable. The ManipulableVR and ManipulableDesktop will have a callback on that event
-            GenericInteractable interactable = interactablePlaceholder.gameObject.GetComponent<GenericInteractable>();
+            IVisualScriptingInteractable interactable = interactablePlaceholder.gameObject.GetComponent<IVisualScriptingInteractable>();
 
-            if (interactable)
+            if (interactable != null)
             {
                 if (allowHandDirect)
                 {
@@ -64,8 +64,8 @@ namespace Reflectis.PLG.TasksReflectis
 
         public void OnDisable()
         {
-            GenericInteractable interactable = interactablePlaceholder.gameObject.GetComponent<GenericInteractable>();
-            if (interactable)
+            IVisualScriptingInteractable interactable = interactablePlaceholder.gameObject.GetComponent<IVisualScriptingInteractable>();
+            if (interactable != null)
             {
                 if (allowHandDirect)
                 {
