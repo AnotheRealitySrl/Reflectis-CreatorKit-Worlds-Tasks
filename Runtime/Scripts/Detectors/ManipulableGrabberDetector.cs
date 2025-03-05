@@ -11,7 +11,7 @@ namespace Reflectis.CreatorKit.Worlds.Tasks
 {
     public class ManipulableGrabberDetector : MonoBehaviour
     {
-        public InteractablePlaceholder interactablePlaceholder;
+        public InteractablePlaceholderObsolete interactablePlaceholder;
         public UnityEvent OnGrabStart = default;
         public UnityEvent OnGrabEnd = default;
         public UnityEvent OnRayGrabStart = default;

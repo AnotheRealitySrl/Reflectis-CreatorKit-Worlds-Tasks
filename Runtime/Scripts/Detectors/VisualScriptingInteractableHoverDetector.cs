@@ -10,7 +10,7 @@ namespace Reflectis.CreatorKit.Worlds.Tasks
 {
     public class VisualScriptingInteractableHoverDetector : MonoBehaviour
     {
-        public InteractablePlaceholder interactablePlaceholder;
+        public InteractablePlaceholderObsolete interactablePlaceholder;
         [SerializeField]
         private bool allowRay;
         [SerializeField]
