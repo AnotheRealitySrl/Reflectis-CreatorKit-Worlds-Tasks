@@ -1,39 +1,36 @@
 
 using Reflectis.CreatorKit.Worlds.Core.Interaction;
 using Reflectis.CreatorKit.Worlds.Placeholders;
-
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
-
-using static Reflectis.CreatorKit.Worlds.Core.Interaction.IInteractable;
 
 namespace Reflectis.CreatorKit.Worlds.Tasks
 {
     public class ManipulableGrabberDetector : MonoBehaviour
     {
+        [HideInInspector]
         public InteractablePlaceholderObsolete interactablePlaceholder;
+        public ManipulablePlaceholder manipulablePlaceholder;
         public UnityEvent OnGrabStart = default;
         public UnityEvent OnGrabEnd = default;
         public UnityEvent OnRayGrabStart = default;
         public UnityEvent OnRayGrabEnd = default;
 
-        //private Grabbable grabbableObj;
 
-        // Start is called before the first frame update
-        void Start()
-        {
-            if (interactablePlaceholder.InteractionModes.HasFlag(EInteractableType.Manipulable))
-            {
-                interactablePlaceholder.OnSetupFinished.AddListener(OnSetupFinished);
-            }
-        }
-
-        public void OnSetupFinished()
+        public async void Setup()
         {
             //gameObject.GetOrAddComponent<Grabbable>();
-
+            if (manipulablePlaceholder == null)
+            {
+                return;
+            }
             //add OnGrabEvent to the Manipulable. The ManipulableVR and ManipulableDesktop will have a callback on that event
-            IManipulable manipulable = interactablePlaceholder.gameObject.GetComponent<IManipulable>();
+            IManipulable manipulable = null;
+            while (!manipulablePlaceholder.TryGetComponent(out manipulable))
+            {
+                await Task.Yield();
+            }
 
             if (manipulable != null)
             {
@@ -50,12 +47,12 @@ namespace Reflectis.CreatorKit.Worlds.Tasks
 
         public void OnEnable()
         {
-            OnSetupFinished();
+            Setup();
         }
 
         public void OnDisable()
         {
-            IManipulable manipulable = interactablePlaceholder.gameObject.GetComponent<IManipulable>();
+            IManipulable manipulable = manipulablePlaceholder.gameObject.GetComponent<IManipulable>();
 
             if (manipulable != null)
             {
@@ -90,9 +87,6 @@ namespace Reflectis.CreatorKit.Worlds.Tasks
         {
             OnRayGrabEnd.Invoke();
         }
-
-
-
     }
 }
 
