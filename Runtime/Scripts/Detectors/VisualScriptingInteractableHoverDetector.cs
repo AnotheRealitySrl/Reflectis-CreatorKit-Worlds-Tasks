@@ -1,5 +1,6 @@
 using Reflectis.CreatorKit.Worlds.Core.Interaction;
 using Reflectis.CreatorKit.Worlds.Placeholders;
+using Reflectis.CreatorKit.Worlds.VisualScripting;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
