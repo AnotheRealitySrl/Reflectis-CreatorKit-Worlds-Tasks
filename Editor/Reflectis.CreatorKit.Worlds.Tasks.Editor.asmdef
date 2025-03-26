@@ -3,7 +3,8 @@
     "rootNamespace": "Reflectis.CreatorKit.Worlds.Tasks.Editor",
     "references": [
         "GUID:213a20fc7dc3c964ea49c0cdd8d72aa5",
-        "GUID:40fa99dae01a17147ab87fa6da4d559c"
+        "GUID:40fa99dae01a17147ab87fa6da4d559c",
+        "GUID:aa13245f3cf702a42b84f0cf5d0b0848"
     ],
     "includePlatforms": [
         "Editor"
