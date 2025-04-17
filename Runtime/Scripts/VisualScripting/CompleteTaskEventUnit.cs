@@ -9,11 +9,6 @@ namespace Reflectis.CreatorKit.Worlds.Tasks
     [UnitCategory("Reflectis\\Flow")]
     public class CompleteTaskEventUnit : Unit
     {
-
-        protected GraphReference graphReference;
-
-        protected Task taskReference; //should simply create the vent taskComplete to complete the task howevereI want yeah
-
         [DoNotSerialize]
         public ValueInput TaskToComplete { get; private set; }
 

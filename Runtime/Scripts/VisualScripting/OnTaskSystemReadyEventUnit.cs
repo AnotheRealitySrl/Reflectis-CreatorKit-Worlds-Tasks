@@ -1,5 +1,7 @@
+using Reflectis.SDK.Core.VisualScripting;
 using Reflectis.SDK.Tasks;
 using Unity.VisualScripting;
+using UnityEngine.Events;
 
 namespace Reflectis.CreatorKit.Worlds.Tasks
 {
@@ -7,13 +9,9 @@ namespace Reflectis.CreatorKit.Worlds.Tasks
     [UnitSurtitle("Tasks")]
     [UnitShortTitle("On Task System Ready")]
     [UnitCategory("Events\\Reflectis")]
-    public class OnTaskSystemReadyEventUnit : EventUnit<TaskSystemReflectis>
+    public class OnTaskSystemReadyEventUnit : UnityEventUnit<TaskSystemReflectis>
     {
         protected override bool register => true;
-
-        protected GraphReference graphReference;
-
-        protected TaskSystemReflectis taskSystemReference;
 
         [DoNotSerialize]
         public ValueInput TaskSystemReference { get; private set; }
@@ -26,29 +24,25 @@ namespace Reflectis.CreatorKit.Worlds.Tasks
 
         public override EventHook GetHook(GraphReference reference)
         {
-            graphReference = reference;
-            using (var flow = Flow.New(reference))
-            {
-                RegisterSystemOnReady(flow);
-            }
             return new EventHook("Task" + this.ToString().Split("EventUnit")[0]);
         }
 
-        private void RegisterSystemOnReady(Flow flow)
+        protected override UnityEvent GetEvent(GraphReference reference)
         {
-            taskSystemReference = flow.GetValue<TaskSystemReflectis>(TaskSystemReference);
+            var taskSystemReference = Flow.New(reference).GetValue<TaskSystemReflectis>(TaskSystemReference);
             if (taskSystemReference == null)
             {
+                return new UnityEvent();
             }
             else
             {
-                taskSystemReference.OnTaskSystemReady.AddListener(OnTaskSystemReadyUnit);
+                return taskSystemReference.OnTaskSystemReady;
             }
         }
 
-        private void OnTaskSystemReadyUnit()
+        protected override TaskSystemReflectis GetArguments(GraphReference reference)
         {
-            Trigger(graphReference, taskSystemReference);
+            return Flow.New(reference).GetValue<TaskSystemReflectis>(TaskSystemReference);
         }
     }
 }

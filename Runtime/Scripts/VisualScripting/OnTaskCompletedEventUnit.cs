@@ -1,5 +1,7 @@
+using Reflectis.SDK.Core.VisualScripting;
 using Reflectis.SDK.Tasks;
 using Unity.VisualScripting;
+using UnityEngine.Events;
 
 namespace Reflectis.CreatorKit.Worlds.Tasks
 {
@@ -7,13 +9,9 @@ namespace Reflectis.CreatorKit.Worlds.Tasks
     [UnitSurtitle("Tasks")]
     [UnitShortTitle("On Task Completed")]
     [UnitCategory("Events\\Reflectis")]
-    public class OnTaskCompletedEventUnit : EventUnit<Task>
+    public class OnTaskCompletedEventUnit : UnityEventUnit<Task, bool>
     {
         protected override bool register => true;
-
-        protected GraphReference graphReference;
-
-        protected Task taskReference;
 
         [DoNotSerialize]
         public ValueInput TaskReference { get; private set; }
@@ -26,29 +24,25 @@ namespace Reflectis.CreatorKit.Worlds.Tasks
 
         public override EventHook GetHook(GraphReference reference)
         {
-            graphReference = reference;
-            using (var flow = Flow.New(reference))
-            {
-                RegisterTaskOnCompleted(flow);
-            }
             return new EventHook("Task" + this.ToString().Split("EventUnit")[0]);
         }
 
-        private void RegisterTaskOnCompleted(Flow flow)
+        protected override UnityEvent<bool> GetEvent(GraphReference reference)
         {
-            taskReference = flow.GetValue<Task>(TaskReference);
+            var taskReference = Flow.New(reference).GetValue<Task>(TaskReference);
             if (taskReference == null)
             {
+                return new UnityEvent<bool>();
             }
             else
             {
-                taskReference.OnTaskCompleted.AddListener(OnTaskCompletedUnit);
+                return taskReference.OnTaskCompleted;
             }
         }
 
-        private void OnTaskCompletedUnit(bool value)
+        protected override Task GetArguments(GraphReference reference, bool value)
         {
-            Trigger(graphReference, taskReference);
+            return Flow.New(reference).GetValue<Task>(TaskReference);
         }
     }
 }
