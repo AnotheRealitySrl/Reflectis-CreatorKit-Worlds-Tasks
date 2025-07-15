@@ -1,7 +1,19 @@
 # Release notes
 
+## v2.1.0
+
+### Added 
+
+- Add `ScriptDefineSysmbols` utility class to addin the string "REFLECTIS_CREATOR_KIT_WORLDS_TASKS".
+
+### Fixed 
+
+- Adapted `TaskSystemReflectis` to match the new events/sessions structure.
+
 ## v2.0.1
+
 ### Fixed
+
 - Now reverting tasks only reverts them one time. Fixed in `TaskSystemReflectis`
 
 ## v2.0.0
