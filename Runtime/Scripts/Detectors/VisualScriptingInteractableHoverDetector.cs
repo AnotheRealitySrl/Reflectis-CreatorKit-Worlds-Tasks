@@ -1,16 +1,17 @@
 using Reflectis.CreatorKit.Worlds.Core.Interaction;
 using Reflectis.CreatorKit.Worlds.Placeholders;
-
+using Reflectis.CreatorKit.Worlds.VisualScripting;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
-
-using static Reflectis.CreatorKit.Worlds.Core.Interaction.IInteractable;
 
 namespace Reflectis.CreatorKit.Worlds.Tasks
 {
     public class VisualScriptingInteractableHoverDetector : MonoBehaviour
     {
-        public InteractablePlaceholder interactablePlaceholder;
+        [HideInInspector]
+        public InteractablePlaceholderObsolete interactablePlaceholder;
+        public VisualScriptingInteractablePlaceholder visualscriptingPlaceholder;
         [SerializeField]
         private bool allowRay;
         [SerializeField]
@@ -21,50 +22,49 @@ namespace Reflectis.CreatorKit.Worlds.Tasks
         public UnityEvent OnHoverEnter = default;
         public UnityEvent OnHoverExit = default;
 
-        // Start is called before the first frame update
-        void Start()
+
+        public async void Setup()
         {
-            if (interactablePlaceholder.InteractionModes.HasFlag(EInteractableType.VisualScriptingInteractable))
+            if (visualscriptingPlaceholder == null)
             {
-                interactablePlaceholder.OnSetupFinished.AddListener(OnSetupFinished);
+                return;
             }
-        }
 
-        public void OnSetupFinished()
-        {
-            //add OnGrabEvent to the Manipulable. The ManipulableVR and ManipulableDesktop will have a callback on that event
-            IVisualScriptingInteractable interactable = interactablePlaceholder.gameObject.GetComponent<IVisualScriptingInteractable>();
-
-            if (interactable != null)
+            IVisualScriptingInteractable visualScriptingInteractable = null;
+            while (!visualscriptingPlaceholder.TryGetComponent(out visualScriptingInteractable))
+            {
+                await Task.Yield();
+            }
+            if (visualScriptingInteractable != null)
             {
                 if (allowHandDirect)
                 {
-                    interactable.OnHoverGrabEnter.AddListener(OnHoverEnterEvent);
-                    interactable.OnHoverGrabExit.AddListener(OnHoverExitEvent);
+                    visualScriptingInteractable.OnHoverGrabEnter.AddListener(OnHoverEnterEvent);
+                    visualScriptingInteractable.OnHoverGrabExit.AddListener(OnHoverExitEvent);
                 }
 
                 if (allowRay)
                 {
-                    interactable.OnHoverRayEnter.AddListener(OnHoverEnterEvent);
-                    interactable.OnHoverRayExit.AddListener(OnHoverExitEvent);
+                    visualScriptingInteractable.OnHoverRayEnter.AddListener(OnHoverEnterEvent);
+                    visualScriptingInteractable.OnHoverRayExit.AddListener(OnHoverExitEvent);
                 }
 
                 if (allowMouse)
                 {
-                    interactable.OnHoverMouseEnter.AddListener(OnHoverEnterEvent);
-                    interactable.OnHoverMouseExit.AddListener(OnHoverExitEvent);
+                    visualScriptingInteractable.OnHoverMouseEnter.AddListener(OnHoverEnterEvent);
+                    visualScriptingInteractable.OnHoverMouseExit.AddListener(OnHoverExitEvent);
                 }
             }
         }
 
         public void OnEnable()
         {
-            OnSetupFinished();
+            Setup();
         }
 
         public void OnDisable()
         {
-            IVisualScriptingInteractable interactable = interactablePlaceholder.gameObject.GetComponent<IVisualScriptingInteractable>();
+            IVisualScriptingInteractable interactable = visualscriptingPlaceholder.gameObject.GetComponent<IVisualScriptingInteractable>();
             if (interactable != null)
             {
                 if (allowHandDirect)

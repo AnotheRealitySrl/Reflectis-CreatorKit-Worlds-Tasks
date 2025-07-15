@@ -27,7 +27,7 @@ namespace Reflectis.CreatorKit.Worlds.Tasks
             }
             get
             {
-                return _isNetworked && SM.GetSystem<IClientModelSystem>().CurrentEvent.Multiplayer;
+                return _isNetworked && SM.GetSystem<IClientModelSystem>().CurrentSession.Multiplayer;
             }
         }
 
