@@ -1,4 +1,9 @@
 # Release notes
+## v2.1.1
+
+### Added 
+
+- Fixed SampleScene to handle reflectis updates.
 
 ## v2.1.0
 
