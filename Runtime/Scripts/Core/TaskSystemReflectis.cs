@@ -35,6 +35,9 @@ namespace Reflectis.CreatorKit.Worlds.Tasks
         // VisualScripting usage
         public UnityEvent OnTaskSystemReady => taskSystemReady;
 
+        //UI will link tot his callback
+        public UnityEvent OnRebuildUI;
+
 
         //questo deve prendersi istanza dell'rpcManager che viene generato tramite il placeholder, in realt� si piglia l'interfaccia. 
         //dovr� poi aspettare che mi arrivi questo componennt prima di fare il Prepare nel caso in cui io sia networkato
@@ -105,6 +108,7 @@ namespace Reflectis.CreatorKit.Worlds.Tasks
                 {
                     taskUIManager.RebuildUIImmediately();
                 }
+                OnRebuildUI?.Invoke();
             }
         }
 
@@ -124,6 +128,7 @@ namespace Reflectis.CreatorKit.Worlds.Tasks
             {
                 taskUIManager.RebuildUIImmediately();
             }
+            OnRebuildUI?.Invoke();
         }
     }
 }
