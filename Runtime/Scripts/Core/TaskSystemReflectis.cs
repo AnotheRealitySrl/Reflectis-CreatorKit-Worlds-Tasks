@@ -69,7 +69,11 @@ namespace Reflectis.CreatorKit.Worlds.Tasks
                 StartCoroutine(AddRevertCallbacks());
             }
 
-            base.Awake();
+            if (startImmediately)
+            {
+                base.Awake();
+            }
+            //base.Awake();
         }
 
         public IEnumerator WaitForRPCManager()
