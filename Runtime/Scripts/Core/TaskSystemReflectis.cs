@@ -4,7 +4,7 @@ using Reflectis.SDK.Tasks;
 using Reflectis.SDK.Tasks.UI;
 
 using System.Collections;
-
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -73,7 +73,6 @@ namespace Reflectis.CreatorKit.Worlds.Tasks
             {
                 base.Awake();
             }
-            //base.Awake();
         }
 
         public IEnumerator WaitForRPCManager()

@@ -1,3 +1,4 @@
+using Mono.Cecil.Cil;
 using Reflectis.SDK.Tasks;
 using System.Collections;
 using System.Collections.Generic;
@@ -35,6 +36,9 @@ namespace Reflectis.CreatorKit.Worlds.Tasks
 
         private void Init(int id)
         {
+            if(id != -1){
+                systemReflectis.Prepare();
+            }
             //calculate last node
             var tasks = FindObjectsOfType<TaskReflectis>();
             TaskNode targetNode = null;
