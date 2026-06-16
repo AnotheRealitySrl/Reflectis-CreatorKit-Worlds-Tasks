@@ -1,4 +1,10 @@
 # Release notes
+## v2.2.0
+
+### Added
+- `OnRebuildUI` callback in `TaskSystemReflectis`.
+- `startImmediately` option in `TasksReflectisSystem`.
+
 ## v2.1.1
 
 ### Added 
