@@ -1,4 +1,10 @@
 # Release notes
+
+## v2.2.1
+
+### Fixed
+- `TaskReflectisStepSetter` only calls `Prepare()` on the task system when the step id is valid, instead of unconditionally.
+- Removed a leftover commented `base.Awake()` and an unused library reference in `TaskSystemReflectis`.
 ## v2.2.0
 
 ### Added
