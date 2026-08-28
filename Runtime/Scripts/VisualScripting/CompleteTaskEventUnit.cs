@@ -1,7 +1,7 @@
-using Reflectis.SDK.Tasks;
+using Virtuademy.SDK.Tasks;
 using Unity.VisualScripting;
 
-namespace Reflectis.CreatorKit.Worlds.Tasks
+namespace Virtuademy.CreatorKit.Worlds.Tasks
 {
     [UnitTitle("Reflectis Tasks: CompleteTask")]
     [UnitSurtitle("Tasks")]

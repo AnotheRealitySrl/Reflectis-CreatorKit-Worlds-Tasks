@@ -1,4 +1,4 @@
-using Reflectis.SDK.Core.Editor;
+using Virtuademy.SDK.Core.Editor;
 using UnityEditor;
 
 [InitializeOnLoad]

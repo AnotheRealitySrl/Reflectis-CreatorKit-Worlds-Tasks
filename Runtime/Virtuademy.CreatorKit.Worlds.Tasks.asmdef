@@ -1,6 +1,6 @@
 {
-    "name": "Reflectis.CreatorKit.Worlds.Tasks",
-    "rootNamespace": "Reflectis.CreatorKit.Worlds.Tasks",
+    "name": "Virtuademy.CreatorKit.Worlds.Tasks",
+    "rootNamespace": "Virtuademy.CreatorKit.Worlds.Tasks",
     "references": [
         "GUID:d144e5d8e92d0bc419736e72debb4e2a",
         "GUID:ab59f74e483e1ee4595bfefea56493f2",

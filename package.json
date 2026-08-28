@@ -1,6 +1,6 @@
 {
-  "name": "com.anotherealitysrl.reflectis-creatorkit-worlds-tasks",
-  "displayName": "Reflectis-CreatorKit-Worlds-Tasks",
+  "name": "com.anotherealitysrl.virtuademy-creatorkit-worlds-tasks",
+  "displayName": "Virtuademy-CreatorKit-Worlds-Tasks",
   "version": "2.2.1",
   "unity": "2020.1",
   "description": "Reflectis CreatorKis Worlds Tasks module",
@@ -10,7 +10,7 @@
   "category": "Unity",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AnotheRealitySrl/Reflectis-CreatorKit-Worlds-Tasks"
+    "url": "https://github.com/AnotheRealitySrl/Virtuademy-CreatorKit-Worlds-Tasks"
   },
   "samples": [
     {

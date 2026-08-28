@@ -1,9 +1,9 @@
-using Reflectis.SDK.Tasks;
+using Virtuademy.SDK.Tasks;
 using System.Collections;
 using UnityEngine;
-using static Reflectis.SDK.Tasks.TaskNode;
+using static Virtuademy.SDK.Tasks.TaskNode;
 
-namespace Reflectis.CreatorKit.Worlds.Tasks
+namespace Virtuademy.CreatorKit.Worlds.Tasks
 {
     public class TaskReflectis : Task
     {

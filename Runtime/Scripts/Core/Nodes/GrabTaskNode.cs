@@ -1,6 +1,6 @@
-using Reflectis.SDK.Tasks;
+using Virtuademy.SDK.Tasks;
 
-namespace Reflectis.CreatorKit.Worlds.Tasks
+namespace Virtuademy.CreatorKit.Worlds.Tasks
 {
     public class GrabTaskNode : TaskNode
     {

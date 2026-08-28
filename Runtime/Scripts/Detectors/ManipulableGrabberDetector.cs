@@ -1,11 +1,11 @@
 
-using Reflectis.CreatorKit.Worlds.Core.Interaction;
-using Reflectis.CreatorKit.Worlds.Placeholders;
+using Virtuademy.CreatorKit.Worlds.Core.Interaction;
+using Virtuademy.CreatorKit.Worlds.Placeholders;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Reflectis.CreatorKit.Worlds.Tasks
+namespace Virtuademy.CreatorKit.Worlds.Tasks
 {
     public class ManipulableGrabberDetector : MonoBehaviour
     {

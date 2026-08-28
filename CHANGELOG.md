@@ -37,7 +37,7 @@
 
 ### Changed
 
-- Changed package name, from Reflectis-PLG-TasksReflectis to Reflecits-CreatorKit-Tasks, and updated namespaces according to new package name.
+- Changed package name, from Virtuademy-PLG-TasksReflectis to Reflecits-CreatorKit-Tasks, and updated namespaces according to new package name.
 
 ## v1.2.0
 

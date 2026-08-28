@@ -1,9 +1,9 @@
-using Reflectis.SDK.Tasks;
+using Virtuademy.SDK.Tasks;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Reflectis.CreatorKit.Worlds.Tasks
+namespace Virtuademy.CreatorKit.Worlds.Tasks
 {
     public class TaskReflectisStepSetter : TaskStepSetter
     {

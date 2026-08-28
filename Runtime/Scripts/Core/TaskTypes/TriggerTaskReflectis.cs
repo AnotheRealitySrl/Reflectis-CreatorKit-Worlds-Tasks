@@ -1,9 +1,9 @@
-using Reflectis.SDK.Graphs;
-using Reflectis.SDK.Tasks;
-using Reflectis.SDK.Tasks.Detectors;
+using Virtuademy.SDK.Graphs;
+using Virtuademy.SDK.Tasks;
+using Virtuademy.SDK.Tasks.Detectors;
 using UnityEngine;
 
-namespace Reflectis.CreatorKit.Worlds.Tasks
+namespace Virtuademy.CreatorKit.Worlds.Tasks
 {
     public class TriggerTaskReflectis : TaskReflectis, ITaskNode<TriggerTaskNode>
     {
